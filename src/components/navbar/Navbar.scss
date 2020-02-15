@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 .navContainer {
   position: relative;
   width: 100%;
@@ -15,12 +16,19 @@
 }
 
 .nav {
-  background-color: #252525;
-  border: 1px solid #707070;
   width: 65%;
   margin: 3rem auto 0 auto;
   padding: 2.5rem;
   border-radius: 2rem;
+
+  &--dark {
+    background-color: $dark-black;
+    border: 1px solid $dark-grey-border;
+  }
+  &--light {
+    border: 1px solid $dark-grey-border;
+    background-color: $light-grey;
+  }
 
   &::before,
   &::after {
@@ -44,8 +52,14 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   &__item {
-    color: #fff;
     font-size: 1.6rem;
+
+    &--light {
+      color: $light-black;
+    }
+    &--dark {
+      color: $dark-white;
+    }
 
     &:hover {
       cursor: pointer;
@@ -56,17 +70,31 @@
 .navbtn {
   height: 7.5rem;
   width: 7.5rem;
-  background-color: #252525;
+
   border-radius: 50%;
   display: block;
   margin: 4rem auto 0 auto;
 
-  &::before,
-  &::after {
-    width: 66.97%;
-    content: "";
-    display: block;
-    border-bottom: 1px solid #ffffff;
+  &--dark {
+    background-color: $dark-black;
+    &::before,
+    &::after {
+      width: 66.97%;
+      content: "";
+      display: block;
+      border-bottom: 1px solid $dark-white;
+    }
+  }
+
+  &--light {
+    background-color: $light-grey;
+    &::before,
+    &::after {
+      width: 66.97%;
+      content: "";
+      display: block;
+      border-bottom: 1px solid #1f1a1b;
+    }
   }
 
   &--hide {
@@ -118,12 +146,12 @@
   right: 9rem;
   height: 6.5rem;
   width: 6.5rem;
-  background-color: #252525;
+  background-color: $dark-black;
   border-radius: 50%;
   display: block;
 
   &--dark {
-    background-color: #5d0404;
+    background-color: $dark-red;
   }
 
   .img {
@@ -138,7 +166,7 @@
 
   &:hover {
     cursor: pointer;
-    border: 1px solid #0368ec;
+    border: 1px solid $link-color;
   }
 
   &:focus {
@@ -173,7 +201,7 @@
 @keyframes moveToXLeft {
   0% {
     transform: rotate(60deg);
-    width: 66.79%;
+    width: 66.97%;
   }
   100% {
     transform: rotate(50deg);
@@ -184,7 +212,7 @@
 @keyframes moveToXRight {
   0% {
     transform: rotate(300deg);
-    width: 66.79%;
+    width: 66.97%;
   }
   100% {
     transform: rotate(310deg);
@@ -198,7 +226,7 @@
     transform: rotate(50deg);
   }
   100% {
-    width: 66.79%;
+    width: 66.97%;
     transform: rotate(60deg);
   }
 }
@@ -209,7 +237,7 @@
     transform: rotate(310deg);
   }
   100% {
-    width: 66.79%;
+    width: 66.97%;
     transform: rotate(300deg);
   }
 }

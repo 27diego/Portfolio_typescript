@@ -9,23 +9,23 @@ export const Navbar = () => {
 
   return (
     <div className={`navContainer navContainer--${show}`}>
-      <div className="nav">
+      <div className={`nav nav--${theme}`}>
         <ul className="navbar">
-          <li className="navbar__item">Home</li>
-          <li className="navbar__item">Skills</li>
-          <li className="navbar__item">Projects</li>
-          <li className="navbar__item">Education</li>
-          <li className="navbar__item">About Me</li>
-          <li className="navbar__item">Contact</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Home</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Skills</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Projects</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Education</li>
+          <li className={`navbar__item navbar__item--${theme}`}>About Me</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Contact</li>
         </ul>
       </div>
       <button
         onClick={() => setShow(show === "show" ? "hide" : "show")}
-        className={`navbtn navbtn--${show}`}
+        className={`navbtn navbtn--${show} navbtn--${theme}`}
       ></button>
 
       <button
-        onClick={() => setTheme(theme === "dark" ? "sunny" : "dark")}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         className={`themebtn themebtn--${theme}`}
       >
         <img

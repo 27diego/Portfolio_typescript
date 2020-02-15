@@ -4,7 +4,7 @@ import sunny from "../../images/Icons/wb_sunny-24px.svg";
 import dark from "../../images/Icons/nights_stay-24px.svg";
 
 export const Navbar = () => {
-  const [show, setShow] = useState("show");
+  const [show, setShow] = useState("hide");
   const [theme, setTheme] = useState("dark");
 
   return (

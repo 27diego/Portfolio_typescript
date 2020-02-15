@@ -71,11 +71,16 @@
 
   &--hide {
     &::before {
-      transform: rotate(60deg);
+      //   transform: rotate(60deg);
+      animation-name: moveVright;
+      animation-fill-mode: forwards;
+      animation-duration: 0.8s;
       margin-right: auto;
     }
     &::after {
-      transform: rotate(300deg);
+      animation-name: moveVleft;
+      animation-fill-mode: forwards;
+      animation-duration: 0.8s;
       margin-left: auto;
     }
   }
@@ -83,12 +88,16 @@
   &--show {
     &::before {
       width: 100%;
-      transform: rotate(50deg);
+      animation-name: moveToXLeft;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
       margin-right: auto;
     }
     &::after {
       width: 100%;
-      transform: rotate(310deg);
+      animation-name: moveToXRight;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
       margin-left: auto;
     }
   }
@@ -161,5 +170,46 @@
 //     }
 //   }
 
-@keyframes show {
+@keyframes moveToXLeft {
+  0% {
+    transform: rotate(60deg);
+    width: 66.79%;
+  }
+  100% {
+    transform: rotate(50deg);
+    width: 100%;
+  }
+}
+
+@keyframes moveToXRight {
+  0% {
+    transform: rotate(300deg);
+    width: 66.79%;
+  }
+  100% {
+    transform: rotate(310deg);
+    width: 100%;
+  }
+}
+
+@keyframes moveVright {
+  0% {
+    width: 100%;
+    transform: rotate(50deg);
+  }
+  100% {
+    width: 66.79%;
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes moveVleft {
+  0% {
+    width: 100%;
+    transform: rotate(310deg);
+  }
+  100% {
+    width: 66.79%;
+    transform: rotate(300deg);
+  }
 }

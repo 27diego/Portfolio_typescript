@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
 
-  transition: all 0.3s;
+  transition: all 0.5s;
 
   &--hide {
     margin-top: -15rem;
@@ -46,6 +46,10 @@
   &__item {
     color: #fff;
     font-size: 1.6rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -109,8 +113,53 @@
   border-radius: 50%;
   display: block;
 
+  &--dark {
+    background-color: #5d0404;
+  }
+
   .img {
     width: 100%;
     margin-top: 0.4rem;
+
+    &--dark {
+      margin-left: 0.4rem;
+      margin-bottom: 0.3rem;
+    }
   }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #0368ec;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// &--hide {
+//     &::before {
+//       transform: rotate(60deg);
+//       margin-right: auto;
+//     }
+//     &::after {
+//       transform: rotate(300deg);
+//       margin-left: auto;
+//     }
+//   }
+
+//   &--show {
+//     &::before {
+//       width: 100%;
+//       transform: rotate(50deg);
+//       margin-right: auto;
+//     }
+//     &::after {
+//       width: 100%;
+//       transform: rotate(310deg);
+//       margin-left: auto;
+//     }
+//   }
+
+@keyframes show {
 }

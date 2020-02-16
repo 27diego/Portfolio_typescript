@@ -1,11 +1,22 @@
 @import "../../styles/variables";
 .intro {
   padding: 3rem 7rem 0 7rem;
-  height: 85vh;
+  height: 84vh;
   position: relative;
+  transition: all 0.5s;
+
+  &--dark {
+    background-color: $dark-bg;
+  }
+
+  &--light {
+    background-color: $light-bg;
+  }
 
   .img {
     &--emoji {
+      animation: iconShow 1s forwards;
+
       height: 20rem;
       display: block;
       margin: 0 auto;
@@ -13,18 +24,26 @@
   }
 
   .greeting {
+    transform: rotate(330deg) translateY(-30rem) translateX(-30rem);
+    animation: show 1s forwards;
     width: 60%;
     &__header {
       margin: 0;
       font-weight: bold;
       font-size: 5.5rem;
-      color: $dark-white;
     }
 
     &__body {
       margin-top: 1rem;
       font-size: 3.5rem;
       font-weight: lighter;
+    }
+
+    &--light {
+      color: $light-black;
+    }
+
+    &--dark {
       color: $dark-white;
     }
   }
@@ -38,26 +57,47 @@
 
     animation: bounce 3s infinite;
 
-    &__text {
-      font-size: 1.6rem;
+    &--dark {
       color: $dark-white;
     }
 
+    &--light {
+      color: $light-black;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+    }
+
     &__icon {
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        width: 45%;
-        border-bottom: 1px solid $dark-white;
+      margin-top: 3rem;
+
+      &--light {
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 45%;
+          border-bottom: 1px solid $light-black;
+        }
+      }
+
+      &--dark {
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 45%;
+          border-bottom: 1px solid $dark-white;
+        }
       }
 
       &::before {
-        transform: rotate(30deg) translateX(0.7rem) translateY(-0.18rem);
+        transform: rotate(30deg) translateX(0.05rem) translateY(-1.2rem);
         margin-right: auto;
       }
       &::after {
-        transform: rotate(330deg) translateY(-1.3rem);
+        transform: rotate(330deg) translateX(-0.05rem) translateY(-1.35rem);
         margin-left: auto;
       }
     }
@@ -77,13 +117,26 @@
   50% {
     transform: translateY(0);
   }
-  57% {
-    transform: translateY(-2px);
-  }
-  64% {
-    transform: translateY(0);
-  }
+
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: rotate(-30deg) translateY(-30rem) translateX(-30rem);
+  }
+  100% {
+    transform: rotate(0) translateY(0) translateX(0);
+  }
+}
+
+@keyframes iconShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

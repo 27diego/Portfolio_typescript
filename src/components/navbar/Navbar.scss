@@ -1,10 +1,21 @@
 @import "../../styles/variables";
+
 .navContainer {
   position: relative;
   width: 100%;
   height: auto;
 
+  padding-top: 3rem;
+
   transition: all 0.5s;
+
+  &--dark {
+    background-color: $dark-bg;
+  }
+
+  &--light {
+    background-color: $light-bg;
+  }
 
   &--hide {
     margin-top: -15rem;
@@ -17,7 +28,7 @@
 
 .nav {
   width: 65%;
-  margin: 3rem auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 2.5rem;
   border-radius: 2rem;
 
@@ -74,6 +85,7 @@
   border-radius: 50%;
   display: block;
   margin: 4rem auto 0 auto;
+  border: 1px solid $dark-white;
 
   &--dark {
     background-color: $dark-black;
@@ -99,7 +111,6 @@
 
   &--hide {
     &::before {
-      //   transform: rotate(60deg);
       animation-name: moveVright;
       animation-fill-mode: forwards;
       animation-duration: 0.8s;
@@ -142,13 +153,14 @@
 
 .themebtn {
   position: absolute;
-  top: 1.7rem;
+  top: 4rem;
   right: 9rem;
   height: 6.5rem;
   width: 6.5rem;
   background-color: $dark-black;
   border-radius: 50%;
   display: block;
+  border: 1px solid $dark-white;
 
   &--dark {
     background-color: $dark-red;
@@ -173,30 +185,6 @@
     outline: none;
   }
 }
-
-// &--hide {
-//     &::before {
-//       transform: rotate(60deg);
-//       margin-right: auto;
-//     }
-//     &::after {
-//       transform: rotate(300deg);
-//       margin-left: auto;
-//     }
-//   }
-
-//   &--show {
-//     &::before {
-//       width: 100%;
-//       transform: rotate(50deg);
-//       margin-right: auto;
-//     }
-//     &::after {
-//       width: 100%;
-//       transform: rotate(310deg);
-//       margin-left: auto;
-//     }
-//   }
 
 @keyframes moveToXLeft {
   0% {

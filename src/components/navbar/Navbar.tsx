@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Navbar.scss";
 import sunny from "../../images/Icons/wb_sunny-24px.svg";
 import dark from "../../images/Icons/nights_stay-24px.svg";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Navbar = () => {
+  const context = useContext(ThemeContext);
+
+  const { theme, toggleTheme } = context;
+
   const [show, setShow] = useState("hide");
-  const [theme, setTheme] = useState("dark");
 
   return (
-    <div className={`navContainer navContainer--${show}`}>
+    <div
+      className={`navContainer navContainer--${show} navContainer--${theme}`}
+    >
       <div className={`nav nav--${theme}`}>
         <ul className="navbar">
           <li className={`navbar__item navbar__item--${theme}`}>Home</li>
@@ -25,7 +31,7 @@ export const Navbar = () => {
       ></button>
 
       <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => toggleTheme()}
         className={`themebtn themebtn--${theme}`}
       >
         <img

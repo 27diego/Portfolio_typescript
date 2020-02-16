@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import "./Intro.scss";
 import logo from "../../images/brand logos/IMG_0855.png";
 import mapIcon from "../../images/Icons/location_on-24px.svg";
 
 export const Intro = () => {
+  const context = useContext(ThemeContext);
+  const { theme, toggleTheme } = context;
+
   return (
-    <div className="intro">
+    <div className={`intro intro--${theme}`}>
       <img className="img--emoji" src={logo} alt="emoji" />
 
-      <div className="greeting">
+      <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">
-          Im an up and coming designer and developer out of Salinas, CA{" "}
+          I'm an up and coming designer and developer out of Salinas, CA{" "}
           {/* {<img className="icon--map" src={mapIcon} alt="map icon" />} */}
         </p>
       </div>
 
-      <div className="indicator">
+      <div className={`indicator indicator--${theme}`}>
         <p className="indicator__text">Swipe Down</p>
-        <div className="indicator__icon">&nbsp;</div>
+        <div className={`indicator__icon indicator__icon--${theme}`}></div>
       </div>
     </div>
   );

@@ -1,13 +1,16 @@
 import React from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import { Intro } from "./components/intro/Intro";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <div className="App" style={{ height: "100%" }}>
-      <Navbar />
-      <Intro />
-    </div>
+    <ThemeContextProvider>
+      <div className="App" style={{ height: "100%" }}>
+        <Navbar />
+        <Intro />
+      </div>
+    </ThemeContextProvider>
   );
 }
 

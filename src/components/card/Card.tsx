@@ -36,7 +36,7 @@ export const Card: React.FC<CardProps> = ({
             ? setShow(false)
             : setTimeout(() => {
                 setShow(true);
-              }, 480);
+              }, 500);
         }}
         className={`Card__side Card__side--${
           expand ? "active" : "unactive"

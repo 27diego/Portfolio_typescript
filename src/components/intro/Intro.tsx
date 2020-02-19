@@ -6,7 +6,7 @@ import mapIcon from "../../images/Icons/location_on-24px.svg";
 
 export const Intro = () => {
   const context = useContext(ThemeContext);
-  const { theme, toggleTheme } = context;
+  const { theme } = context;
 
   return (
     <div className={`intro intro--${theme}`}>
@@ -15,8 +15,8 @@ export const Intro = () => {
       <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">
-          I'm an up and coming designer and developer out of Salinas, CA{" "}
-          {/* {<img className="icon--map" src={mapIcon} alt="map icon" />} */}
+          I'm an up and coming designer and developer out of Salinas, CA
+          {<img className="icon--map" src={mapIcon} alt="map icon" />}
         </p>
       </div>
 

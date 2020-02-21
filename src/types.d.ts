@@ -4,3 +4,10 @@ type CardProps = {
   paragraph: string;
   longParagraph: string;
 };
+
+type Projects = {
+  title: string;
+  logo: string;
+  landing: string;
+  tech: string[];
+};

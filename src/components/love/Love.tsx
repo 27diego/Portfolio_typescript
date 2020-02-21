@@ -10,8 +10,6 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { Card } from "../Card/Card";
 
 export const Love: React.FC = () => {
-  const [activateCard, setActivateCard] = useState<boolean>(false);
-
   const [Cards] = useState([
     {
       logo: designLogo,

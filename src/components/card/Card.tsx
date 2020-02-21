@@ -36,7 +36,7 @@ export const Card: React.FC<CardProps> = ({
             ? setShow(false)
             : setTimeout(() => {
                 setShow(true);
-              }, 500);
+              }, 650);
         }}
         className={`Card__side Card__side--${
           expand ? "active" : "unactive"
@@ -68,7 +68,11 @@ export const Card: React.FC<CardProps> = ({
             </p>
           </div>
         ) : (
-          ""
+          <div className={`hidden-container hidden-container--${theme}`}>
+            <div className="loading-dots">
+              <div className="dots">&nbsp; </div>
+            </div>
+          </div>
         )}
         <div
           className={`Card__content Card__content--${

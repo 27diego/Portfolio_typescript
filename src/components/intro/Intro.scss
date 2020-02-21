@@ -4,6 +4,7 @@
   height: 84vh;
   position: relative;
   transition: all 0.5s;
+  z-index: 100;
 
   &--dark {
     background-color: $dark-bg;
@@ -105,7 +106,23 @@
 }
 
 .icon {
-  &__map {
+  &__container--map {
+    transition: all 0.5s;
+    transform: translateY(0.5rem);
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      cursor: pointer;
+    }
+  }
+  &--map {
+    &--dark {
+      fill: #9b1010;
+    }
+
+    &--light {
+      fill: $light-red;
+    }
   }
 }
 

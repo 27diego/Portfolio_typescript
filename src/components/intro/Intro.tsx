@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import "./Intro.scss";
 import logo from "../../images/brand logos/IMG_0855.png";
-import mapIcon from "../../images/Icons/location_on-24px.svg";
 
 export const Intro = () => {
   const context = useContext(ThemeContext);
@@ -16,7 +15,18 @@ export const Intro = () => {
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">
           I'm an up and coming designer and developer out of Salinas, CA
-          {<img className="icon--map" src={mapIcon} alt="map icon" />}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="45"
+            viewBox="0 0 24 24"
+            width="45"
+            className="icon__container--map"
+          >
+            <path
+              className={`icon--map--${theme}`}
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            />
+          </svg>
         </p>
       </div>
 

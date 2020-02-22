@@ -9,5 +9,5 @@ type Projects = {
   title: string;
   logo: string;
   landing: string;
-  tech: string[];
+  icons: string[];
 };

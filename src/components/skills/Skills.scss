@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+
+.skills {
+  &__header {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    color: $dark-white;
+    font-weight: bold;
+  }
+
+  &__icon {
+    height: 80%;
+    display: block;
+  }
+}
+
+.Container--skills {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 5% 1fr;
+
+  .technologies {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    justify-items: center;
+    align-items: center;
+
+    &__header {
+      grid-column: 1/-1;
+      font-size: 1.5rem;
+      color: $dark-white;
+    }
+  }
+
+  .seperator--skills {
+    justify-self: center;
+    margin-top: 5rem;
+    align-self: center;
+    content: "";
+    display: block;
+    height: 80%;
+    width: 1px;
+    border: 1px solid rgba($dark-grey-border, 0.5);
+  }
+}
+
+.container--icon {
+  width: 23rem;
+  height: 20rem;
+  background-color: $dark-black;
+  border: solid 1px rgba($dark-grey-border, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--middle {
+    grid-column: 1/-1;
+  }
+}

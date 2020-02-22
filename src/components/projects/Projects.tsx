@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Projects.scss";
 
+import { Pannel } from "./Pannel";
+import { ThemeContext } from "../../context/ThemeContext";
+
 export const Projects: React.FC = () => {
-  const [expand, setExpand] = useState(false);
+  const context = useContext(ThemeContext);
+
+  const { theme } = context;
+
   const [projects] = useState([
     {
       title: "CIG",
@@ -25,19 +31,16 @@ export const Projects: React.FC = () => {
   ]);
 
   return (
-    <div className="Container--Projects">
+    <div className={`Container--Projects Container--Projects--${theme}`}>
       <React.Fragment>
-        {projects.map(item => {
-          return (
-            <div
-              className={`project project--${item.title
-                .replace(/\s/g, "")
-                .toLocaleLowerCase()}`}
-            >
-              <div className="project__title">{item.title}</div>
-            </div>
-          );
-        })}
+        {projects.map(item => (
+          <Pannel
+            title={item.title}
+            logo={item.logo}
+            icons={item.icons}
+            landing={item.landing}
+          />
+        ))}
       </React.Fragment>
     </div>
   );

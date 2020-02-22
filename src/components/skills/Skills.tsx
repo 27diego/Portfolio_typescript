@@ -17,8 +17,8 @@ import redis from "../../images/brand logos/Back end/redis.svg";
 import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
 
 export const Skills: React.FC = () => {
-  const [modal, setModal] = useState<boolean>(false);
-  const [selected, setSelected] = useState<string>("");
+  const [modal, setModal] = useState<boolean>(true);
+  const [selected, setSelected] = useState<string>(react);
 
   console.log(modal, " ", selected);
 

@@ -1,6 +1,8 @@
 import React from "react";
 import "./SkillsModal.scss";
 
+import react from "../../images/reactlogo.png";
+
 export const SkillsModal: React.FC<SkillsModal> = ({ selected, setModal }) => {
   console.log(selected, " from modal");
 
@@ -10,10 +12,14 @@ export const SkillsModal: React.FC<SkillsModal> = ({ selected, setModal }) => {
 
   return (
     <div className="Container__Modal--skills">
-      <div>Modal Here</div>
-      <button className="Close Modal" onClick={closeModal}>
-        Close Modal
-      </button>
+      <img
+        className="modal__icon"
+        src={selected === "react" ? react : selected}
+        alt="logo"
+      />
+      <div className="modal__skill modal__skill--1">Context</div>
+      <div className="modal__skill modal__skill--2">Hooks</div>
+      <div className="modal__skill modal__skill--3">Server Side</div>
     </div>
   );
 };

@@ -35,6 +35,7 @@ export const Projects: React.FC = () => {
       <React.Fragment>
         {projects.map(item => (
           <Pannel
+            key={item.title}
             title={item.title}
             logo={item.logo}
             icons={item.icons}

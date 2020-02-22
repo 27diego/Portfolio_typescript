@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .skills {
+  position: relative;
   &__header {
     margin-top: 3rem;
     text-align: center;
@@ -12,6 +13,65 @@
   &__icon {
     height: 80%;
     display: block;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    fill: "";
+
+    &--react {
+      &:hover {
+        fill: $react-logo;
+      }
+    }
+    &--css {
+      &:hover {
+        fill: $css3-logo;
+      }
+    }
+    &--html {
+      &:hover {
+        fill: $html5-logo;
+      }
+    }
+    &--js {
+      &:hover {
+        fill: $javascript-logo;
+      }
+    }
+    &--redux {
+      &:hover {
+        fill: $redux-logo;
+      }
+    }
+    &--npm {
+      &:hover {
+        fill: $npm-logo;
+      }
+    }
+    &--node {
+      &:hover {
+        fill: $nodejs-logo;
+      }
+    }
+    &--mongodb {
+      &:hover {
+        fill: $mongoDB-logo;
+      }
+    }
+    &--docker {
+      &:hover {
+        fill: $docker-logo;
+      }
+    }
+    &--redis {
+      &:hover {
+        fill: $redis-logo;
+      }
+    }
+    &--postgresql {
+      &:hover {
+        fill: $postgress-logo;
+      }
+    }
   }
 }
 

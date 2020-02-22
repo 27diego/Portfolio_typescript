@@ -11,3 +11,8 @@ type Projects = {
   landing: string;
   icons: string[];
 };
+
+type SkillsModal = {
+  selected: string;
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+};

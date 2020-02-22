@@ -27,7 +27,10 @@ export const Pannel: React.FC<Projects> = ({ title, logo, icons, landing }) => {
           <div className="project__logo">{logo}</div>
           <div className="container--icons">
             {icons.map(icon => (
-              <div className="icon"> {icon} </div>
+              <div key={icon} className="icon">
+                {" "}
+                {icon}{" "}
+              </div>
             ))}
           </div>
           <div className="project__landing">{landing}</div>

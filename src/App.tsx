@@ -5,6 +5,7 @@ import { Love } from "./components/love/Love";
 import { Projects } from "./components/projects/Projects";
 import { Skills } from "./components/skills/Skills";
 import { Education } from "./components/education/Education";
+import { Outro } from "./components/outro/Outro";
 
 import { ThemeContextProvider } from "./context/ThemeContext";
 
@@ -18,6 +19,7 @@ function App() {
         <Projects />
         <Skills />
         <Education />
+        <Outro />
       </div>
     </ThemeContextProvider>
   );

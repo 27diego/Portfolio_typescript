@@ -16,10 +16,14 @@ export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
   return (
     <div onMouseLeave={makeExpand} className="Container--Course">
       {expand ? (
-        ""
+        <div className="course course--true">
+          <img className="course__icon" src={icon} alt={title} />
+          <div className="course__title">{title}</div>
+          <div className="course__desc">{description}</div>
+        </div>
       ) : (
-        <div onMouseOver={makeExpand} className="container--icon--course">
-          <img className="icon--course" src={icon} alt={title} />
+        <div onMouseOver={makeExpand} className="course course--false">
+          <img className="course__icon" src={icon} alt={title} />
         </div>
       )}
     </div>

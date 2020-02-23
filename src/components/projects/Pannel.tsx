@@ -11,8 +11,10 @@ export const Pannel: React.FC<Projects> = ({ title, logo, icons, landing }) => {
         .replace(/\s/g, "")
         .toLocaleLowerCase()} project--${expand ? "expand" : "noExpand"}`}
       onMouseEnter={() => {
+        // setTimeout(() => {
         setExpand(true);
         setShow(true);
+        // }, 200);
       }}
       onMouseLeave={() => {
         setExpand(false);
@@ -28,8 +30,7 @@ export const Pannel: React.FC<Projects> = ({ title, logo, icons, landing }) => {
           <div className="container--icons">
             {icons.map(icon => (
               <div key={icon} className="icon">
-                {" "}
-                {icon}{" "}
+                {icon}
               </div>
             ))}
           </div>

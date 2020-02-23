@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+
+.Container--Education {
+  border-top: 1px solid $dark-grey-border;
+  width: 100%;
+  height: 100vh;
+  padding-top: 4rem;
+}
+
+.EdHeader {
+  height: 30%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  &__degree {
+    color: white;
+    font-size: 3rem;
+    font-family: "Work Sans";
+    width: 10%;
+  }
+
+  &__img {
+    height: 20rem;
+    border-radius: 50%;
+    grid-column: 2;
+  }
+}
+
+.courses {
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  height: 50%;
+}
+
+.wrapper--text {
+  width: 70%;
+  grid-column: 1/2;
+  justify-self: end;
+}

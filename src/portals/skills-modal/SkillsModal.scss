@@ -40,3 +40,47 @@
     }
   }
 }
+
+.container--btn--exit {
+  background-color: $dark-red;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: relative;
+  grid-column: -1;
+
+  &:hover {
+    background: rgba($dark-red, 0.5);
+    cursor: pointer;
+  }
+
+  .btn--exit {
+    height: 1px;
+    width: 3rem;
+    // background-color: white;
+
+    &::after,
+    &::before {
+      width: 3rem;
+      height: 2px;
+      background-color: $dark-white;
+      display: inline-block;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 48%;
+      left: 12%;
+      // transform: translateY(-50%);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

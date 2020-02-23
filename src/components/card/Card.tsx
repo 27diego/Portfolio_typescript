@@ -19,6 +19,8 @@ export const Card: React.FC<CardProps> = ({
   const [expand, setExpand] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
 
+  console.log(show);
+
   return (
     <div className={`Card Card--${expand ? "active" : "unactive"}`}>
       <div className={`Card__side Card__side--${theme} Card__side--front`}>
@@ -68,11 +70,12 @@ export const Card: React.FC<CardProps> = ({
             </p>
           </div>
         ) : (
-          <div className={`hidden-container hidden-container--${theme}`}>
-            <div className="loading-dots">
-              <div className="dots">&nbsp; </div>
-            </div>
-          </div>
+          // <div className={`hidden-container hidden-container--${theme}`}>
+          //   <div className="loading-dots">
+          //     <div className="dots">&nbsp; </div>
+          //   </div>
+          // </div>
+          ""
         )}
         <div
           className={`Card__content Card__content--${

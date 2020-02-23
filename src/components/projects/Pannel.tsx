@@ -10,13 +10,13 @@ export const Pannel: React.FC<Projects> = ({ title, logo, icons, landing }) => {
       className={`project project--${title
         .replace(/\s/g, "")
         .toLocaleLowerCase()} project--${expand ? "expand" : "noExpand"}`}
-      onClick={() => {
-        setExpand(!expand);
-        show
-          ? setShow(false)
-          : setTimeout(() => {
-              setShow(true);
-            }, 500);
+      onMouseEnter={() => {
+        setExpand(true);
+        setShow(true);
+      }}
+      onMouseLeave={() => {
+        setExpand(false);
+        setShow(false);
       }}
     >
       <div className={`project--${expand ? "expand" : "noExpand"}__title`}>

@@ -12,6 +12,9 @@ export const SkillsModal: React.FC<SkillsModal> = ({ selected, setModal }) => {
 
   return (
     <div className="Container__Modal--skills">
+      <div onClick={closeModal} className="container--btn--exit">
+        <div className="btn--exit">&nbsp;</div>
+      </div>
       <img
         className="modal__icon"
         src={selected === "react" ? react : selected}

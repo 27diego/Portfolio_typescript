@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import "./Outro.scss";
 
 import linkedin from "../../images/brand logos/linkedin.svg";
@@ -12,6 +13,9 @@ export const Outro: React.FC = () => {
     email: "",
     message: ""
   });
+
+  const context = useContext(ThemeContext);
+  const { theme } = context;
 
   const change = (type: string, value: string) => {
     console.log(type);
@@ -33,17 +37,17 @@ export const Outro: React.FC = () => {
     }
   };
 
-  console.log(form);
-
   return (
-    <div className="Container--Outro">
+    <div className={`Container--Outro Container--Outro--${theme}`}>
       <div className="container--form">
-        <form className="form">
-          <div className="form__header">Contact Me</div>
+        <form className={`form form--${theme}`}>
+          <div className={`form__header form__header--${theme}`}>
+            Contact Me
+          </div>
           <input
             value={form.name}
             onChange={e => change("name", e.target.value)}
-            className="form__name"
+            className={`form__name form__input form__input--${theme}`}
             placeholder="Name"
             type="text"
             required
@@ -51,7 +55,7 @@ export const Outro: React.FC = () => {
           <input
             value={form.subject}
             onChange={e => change("subject", e.target.value)}
-            className="form__subject"
+            className={`form__subject form__input form__input--${theme}`}
             placeholder="Subject"
             type="text"
             required
@@ -59,21 +63,20 @@ export const Outro: React.FC = () => {
           <input
             value={form.email}
             onChange={e => change("email", e.target.value)}
-            className="form__email"
+            className={`form__email form__input form__input--${theme}`}
             placeholder="Email"
             type="email"
             required
           />
-          <input
+          <textarea
             value={form.message}
             onChange={e => change("message", e.target.value)}
-            className="form__message"
+            className={`form__message form__input form__input--${theme}`}
             placeholder="Message"
-            type="text"
             required
           />
 
-          <div className="form__outro">
+          <div className={`form__outro form__outro--${theme}`}>
             I am interested in freelancing opportunities and would love to help
             you on your next project! Send me a message and we’ll go from there
             ….
@@ -83,32 +86,40 @@ export const Outro: React.FC = () => {
         </form>
       </div>
       <div className="container--links">
-        <div className="links links--1">Quick Links</div>
-        <div className="links__icon--container links__icon--linkedin">
+        <div className={`links links--${theme} links--1`}>Quick Links</div>
+        <div
+          className={`links__icon--container links__icon--container--${theme} links__icon--linkedin`}
+        >
           <img
             src={linkedin}
             className="links__icon links__icon--linkedin"
             alt="linkedin logo"
           />
         </div>
-        <div className="links__icon--container links__icon--gmail">
+        <div
+          className={`links__icon--container links__icon--container--${theme} links__icon--gmail`}
+        >
           <img
             src={gmail}
             className="links__icon links__icon--gmail"
             alt="gmail logo"
           />
         </div>
-        <div className="links__icon--container links__icon--github">
+        <div
+          className={`links__icon--container links__icon--container--${theme} links__icon--github`}
+        >
           <img
             src={github}
             className="links__icon links__icon--github"
             alt="github logo"
           />
         </div>
-        <div className="links__icon--container links__icon--my">
+        <div
+          className={`links__icon--container links__icon--container--${theme} links__icon--my`}
+        >
           <div className="links__icon--my">More about me</div>
         </div>
-        <div className="links links--2">Or View My Work</div>
+        <div className={`links links--${theme} links--2`}>Or View My Work</div>
       </div>
     </div>
   );

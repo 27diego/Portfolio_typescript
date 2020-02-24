@@ -3,20 +3,35 @@
 .Container--Course {
   width: 90%;
   height: 100%;
+  position: relative;
 
   .CourseCard {
     height: 100%;
-    background-color: $dark-blue;
     border-radius: 5px;
     padding: 2rem;
+
+    &--dark {
+      background-color: $dark-blue;
+    }
+    &--light {
+      background-color: $light-blue-square-background;
+    }
+
+    transition: all 0.8s;
 
     &__title {
       padding-top: 9rem;
       font-size: 2.3rem;
-      color: $dark-white;
       font-family: "Work Sans";
       font-weight: 500;
       text-align: center;
+
+      &--light {
+        color: $light-black;
+      }
+      &--dark {
+        color: $dark-white;
+      }
     }
     &__description {
       padding-top: 2rem;
@@ -24,37 +39,46 @@
     }
 
     &--false {
-      display: none;
+      opacity: 0;
     }
     &--true {
-      display: block;
+      opacity: 1;
     }
   }
 
   .CourseIcon {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
     &__wrapper {
       height: 7rem;
       width: 7rem;
-      background-color: $dark-blue;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &--light {
+        background-color: $light-blue-square-background;
+      }
+      &--dark {
+        background-color: $dark-blue;
+      }
     }
 
-    transition: all 1s;
+    transition: all 0.5s;
 
     &__icon {
       height: 5rem;
     }
 
     &--true {
-      transform: translateY(-31rem);
+      transform: translateX(-50%) translateY(-100%);
     }
     &--false {
-      transform: translateY(7rem);
+      transform: translateX(-50%) translateY(0);
     }
   }
 }

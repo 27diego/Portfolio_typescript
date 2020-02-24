@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import "./Education.scss";
 
 import school from "../../images/brand logos/csumblogo.png";
@@ -37,11 +38,14 @@ export const Education: React.FC = () => {
     }
   ]);
 
+  const context = useContext(ThemeContext);
+  const { theme } = context;
+
   return (
-    <div className="Container--Education">
+    <div className={`Container--Education Container--Education--${theme}`}>
       <div className="EdHeader">
         <div className="wrapper--text">
-          <span className="EdHeader__degree">
+          <span className={`EdHeader__degree EdHeader__degree--${theme}`}>
             B.S. <br /> Computer Science Software Engineer
           </span>
         </div>

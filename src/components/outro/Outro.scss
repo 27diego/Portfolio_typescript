@@ -5,8 +5,14 @@
   width: 100%;
   display: flex;
 
-  .container--form {
+  &--dark {
     background-color: $dark-bg;
+  }
+  &--light {
+    background-color: $light-bg;
+  }
+
+  .container--form {
     height: 100%;
     width: 50%;
     display: flex;
@@ -15,7 +21,6 @@
   }
 
   .container--links {
-    background-color: $dark-bg;
     height: 100%;
     width: 50%;
     padding: 0 2rem 2rem 2rem;
@@ -29,26 +34,41 @@
 }
 
 .form {
-  background-color: #222222;
   width: 93%;
   height: 93%;
   padding: 3rem;
   border-radius: 10px;
 
+  &--dark {
+    background-color: #222222;
+  }
+  &--light {
+    background-color: $light-blue-square-background;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(10, 1fr);
 
-  input {
-    background-color: $dark-black;
+  &__input {
     border: 1px solid rgba($color: $dark-grey-border, $alpha: 0.4);
     padding: 1rem;
     color: $dark-white;
     font-size: 1.3rem;
 
-    &::placeholder {
-      color: $dark-white;
-      font-size: 1.3rem;
+    &--dark {
+      background-color: $dark-black;
+      &::placeholder {
+        color: $dark-white;
+        font-size: 1.3rem;
+      }
+    }
+    &--light {
+      background-color: $dark-white;
+      &::placeholder {
+        color: $light-black;
+        font-size: 1.3rem;
+      }
     }
 
     &:focus {
@@ -58,10 +78,16 @@
   }
 
   &__header {
-    color: $dark-white;
     font-size: 2.7rem;
     padding-bottom: 2rem;
     margin-top: -0.8rem;
+
+    &--light {
+      color: $light-black;
+    }
+    &--dark {
+      color: $dark-white;
+    }
   }
 
   &__name {
@@ -91,7 +117,13 @@
     grid-column: 1/3;
     grid-row: 9/11;
     align-self: center;
-    color: $dark-white;
+
+    &--dark {
+      color: $dark-white;
+    }
+    &--light {
+      color: $light-black;
+    }
   }
 
   .btn--Oform {
@@ -127,8 +159,16 @@
 }
 
 .links {
-  color: $dark-white;
   font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+
+  &--light {
+    color: $light-black;
+  }
+  &--dark {
+    color: $dark-white;
+  }
 
   &--1 {
     grid-area: 1/2/2/3;
@@ -140,21 +180,48 @@
       display: inline-block;
       border-bottom: 1px solid white;
     }
+    &::after {
+      transform: translateX(-100%) translateY(-2200%);
+    }
+
+    &::before {
+      transform: translateX(100%) translateY(1000%);
+    }
   }
   &--2 {
     grid-area: 4/2/5/3;
-    //before & after
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      display: inline-block;
+      border-bottom: 1px solid white;
+    }
+    &::after {
+      transform: translateX(-100%) translateY(-2200%);
+    }
+
+    &::before {
+      transform: translateX(100%) translateY(1000%);
+    }
   }
 
   &__icon {
     &--container {
-      background-color: $dark-blue;
       width: 8rem;
       height: 8rem;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &--light {
+        background-color: $light-blue-square-background;
+      }
+      &--dark {
+        background-color: $dark-blue;
+      }
     }
     height: 5rem;
 

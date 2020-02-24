@@ -14,18 +14,22 @@ export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
     setExpand(!expand);
   };
   return (
-    <div onMouseLeave={makeExpand} className="Container--Course">
-      {expand ? (
-        <div className="course course--true">
-          <img className="course__icon" src={icon} alt={title} />
-          <div className="course__title">{title}</div>
-          <div className="course__desc">{description}</div>
+    <div className="Container--Course">
+      <div
+        onMouseLeave={makeExpand}
+        className={`CourseCard CourseCard--${expand}`}
+      >
+        <div className="CourseCard__title">{title}</div>
+        <div className="CourseCard__description">{description}</div>
+      </div>
+      <div
+        onMouseEnter={makeExpand}
+        className={`CourseIcon CourseIcon--${expand}`}
+      >
+        <div className="CourseIcon__wrapper">
+          <img className="CourseIcon__icon" src={icon} alt={`${title} icon`} />
         </div>
-      ) : (
-        <div onMouseOver={makeExpand} className="course course--false">
-          <img className="course__icon" src={icon} alt={title} />
-        </div>
-      )}
+      </div>
     </div>
   );
 };

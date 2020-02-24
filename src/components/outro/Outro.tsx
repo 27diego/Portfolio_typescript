@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./Outro.scss";
 
+import linkedin from "../../images/brand logos/linkedin.svg";
+import gmail from "../../images/brand logos/gmail.svg";
+import github from "../../images/brand logos/github.svg";
+
 export const Outro: React.FC = () => {
   const [form, setForm] = useState({
     name: "",
@@ -78,7 +82,34 @@ export const Outro: React.FC = () => {
           <button className="btn--Oform">OK!</button>
         </form>
       </div>
-      <div className="container--links">&nbsp;</div>
+      <div className="container--links">
+        <div className="links links--1">Quick Links</div>
+        <div className="links__icon--container links__icon--linkedin">
+          <img
+            src={linkedin}
+            className="links__icon links__icon--linkedin"
+            alt="linkedin logo"
+          />
+        </div>
+        <div className="links__icon--container links__icon--gmail">
+          <img
+            src={gmail}
+            className="links__icon links__icon--gmail"
+            alt="gmail logo"
+          />
+        </div>
+        <div className="links__icon--container links__icon--github">
+          <img
+            src={github}
+            className="links__icon links__icon--github"
+            alt="github logo"
+          />
+        </div>
+        <div className="links__icon--container links__icon--my">
+          <div className="links__icon--my">More about me</div>
+        </div>
+        <div className="links links--2">Or View My Work</div>
+      </div>
     </div>
   );
 };

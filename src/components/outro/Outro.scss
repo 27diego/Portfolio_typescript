@@ -15,9 +15,16 @@
   }
 
   .container--links {
-    background-color: $dark-red;
+    background-color: $dark-bg;
     height: 100%;
     width: 50%;
+    padding: 0 2rem 2rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
 
@@ -115,6 +122,53 @@
 
     &:active {
       outline: none;
+    }
+  }
+}
+
+.links {
+  color: $dark-white;
+  font-size: 1.5rem;
+
+  &--1 {
+    grid-area: 1/2/2/3;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      display: inline-block;
+      border-bottom: 1px solid white;
+    }
+  }
+  &--2 {
+    grid-area: 4/2/5/3;
+    //before & after
+  }
+
+  &__icon {
+    &--container {
+      background-color: $dark-blue;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    height: 5rem;
+
+    &--linkedin {
+      grid-area: 2/2/3/3;
+    }
+    &--gmail {
+      grid-area: 3/2/4/3;
+    }
+    &--github {
+      grid-area: 5/2/6/3;
+    }
+    &--my {
+      grid-area: 6/2/7/3;
     }
   }
 }

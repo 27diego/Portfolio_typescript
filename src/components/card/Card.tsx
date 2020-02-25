@@ -19,10 +19,18 @@ export const Card: React.FC<CardProps> = ({
   const [expand, setExpand] = useState<boolean>(false);
   const [show, setShow] = useState<boolean>(false);
 
+  const hide = (): void => {
+    setExpand(false);
+    setShow(false);
+  };
+
   console.log(show);
 
   return (
-    <div className={`Card Card--${expand ? "active" : "unactive"}`}>
+    <div
+      onMouseLeave={hide}
+      className={`Card Card--${expand ? "active" : "unactive"}`}
+    >
       <div className={`Card__side Card__side--${theme} Card__side--front`}>
         <div
           className={`Card__content Card__content--front Card__content--${theme}`}

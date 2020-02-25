@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .Container--Skills {
+  position: relative;
   &--dark {
     background-color: $dark-bg;
   }

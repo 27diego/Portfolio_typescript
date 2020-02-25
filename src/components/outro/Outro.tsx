@@ -90,11 +90,17 @@ export const Outro: React.FC = () => {
         <div
           className={`links__icon--container links__icon--container--${theme} links__icon--linkedin`}
         >
-          <img
-            src={linkedin}
-            className="links__icon links__icon--linkedin"
-            alt="linkedin logo"
-          />
+          <a
+            href="https://www.linkedin.com/in/diego-vega-maravilla-493470155/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src={linkedin}
+              className="links__icon links__icon--linkedin"
+              alt="linkedin logo"
+            />
+          </a>
         </div>
         <div
           className={`links__icon--container links__icon--container--${theme} links__icon--gmail`}
@@ -108,11 +114,17 @@ export const Outro: React.FC = () => {
         <div
           className={`links__icon--container links__icon--container--${theme} links__icon--github`}
         >
-          <img
-            src={github}
-            className="links__icon links__icon--github"
-            alt="github logo"
-          />
+          <a
+            href="https://github.com/27diego"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src={github}
+              className="links__icon links__icon--github"
+              alt="github logo"
+            />
+          </a>
         </div>
         <div
           className={`links__icon--container links__icon--container--${theme} links__icon--my`}

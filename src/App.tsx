@@ -6,6 +6,7 @@ import { Projects } from "./components/projects/Projects";
 import { Skills } from "./components/skills/Skills";
 import { Education } from "./components/education/Education";
 import { Outro } from "./components/outro/Outro";
+import { More } from "./components/more/More";
 
 import { ThemeContextProvider } from "./context/ThemeContext";
 
@@ -20,6 +21,7 @@ function App() {
         <Skills />
         <Education />
         <Outro />
+        {/* <More /> */}
       </div>
     </ThemeContextProvider>
   );

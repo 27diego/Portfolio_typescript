@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./Skills.scss";
 
 import { ThemeContext } from "../../context/ThemeContext";
@@ -17,6 +17,7 @@ import postgresql from "../../images/brand logos/Back end/postgresql.svg";
 import redis from "../../images/brand logos/Back end/redis.svg";
 
 import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
+import { Overlay } from "../../portals/skills-modal/overlay/Overlay";
 
 export const Skills: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
@@ -24,6 +25,10 @@ export const Skills: React.FC = () => {
 
   const context = useContext(ThemeContext);
   const { theme } = context;
+
+  useEffect(() => {
+    console.log("Component did mount!!");
+  }, []);
 
   return (
     <div className={`Container--Skills Container--Skills--${theme}`}>
@@ -236,7 +241,14 @@ export const Skills: React.FC = () => {
         </div>
       </div>
 
-      {modal ? <SkillsModal selected={selected} setModal={setModal} /> : ""}
+      {/* {modal ? (
+        <React.Fragment>
+          <SkillsModal selected={selected} setModal={setModal} />
+          <Overlay />
+        </React.Fragment>
+      ) : (
+        ""
+      )} */}
     </div>
   );
 };

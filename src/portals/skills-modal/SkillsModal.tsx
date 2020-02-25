@@ -1,6 +1,8 @@
 import React from "react";
 import "./SkillsModal.scss";
 
+import { Overlay } from "./overlay/Overlay";
+
 import react from "../../images/reactlogo.png";
 
 export const SkillsModal: React.FC<SkillsModal> = ({ selected, setModal }) => {
@@ -23,6 +25,8 @@ export const SkillsModal: React.FC<SkillsModal> = ({ selected, setModal }) => {
       <div className="modal__skill modal__skill--1">Context</div>
       <div className="modal__skill modal__skill--2">Hooks</div>
       <div className="modal__skill modal__skill--3">Server Side</div>
+
+      <Overlay />
     </div>
   );
 };

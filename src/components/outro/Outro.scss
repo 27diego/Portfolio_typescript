@@ -59,7 +59,7 @@
     &--dark {
       background-color: $dark-black;
       &::placeholder {
-        color: $dark-white;
+        color: rgba($dark-white, 0.5);
         font-size: 1.3rem;
       }
     }
@@ -208,6 +208,9 @@
   }
 
   &__icon {
+    &:hover {
+      cursor: pointer;
+    }
     &--container {
       width: 8rem;
       height: 8rem;
@@ -235,6 +238,7 @@
       grid-area: 5/2/6/3;
     }
     &--my {
+      cursor: pointer;
       grid-area: 6/2/7/3;
     }
   }

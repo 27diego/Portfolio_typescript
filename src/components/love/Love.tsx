@@ -7,7 +7,7 @@ import ProblemSolveLogo from "../../images/Icons/wb_incandescent-24px.svg";
 
 import { ThemeContext } from "../../context/ThemeContext";
 
-import { Card } from "../Card/Card";
+import { Card } from "../card/Card";
 
 export const Love: React.FC = () => {
   const [Cards] = useState([

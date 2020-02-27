@@ -2,23 +2,11 @@ import React, { useState, useContext } from "react";
 import "./Navbar.scss";
 import sunny from "../../images/Icons/wb_sunny-24px.svg";
 import dark from "../../images/Icons/nights_stay-24px.svg";
+
+import { Link } from "react-scroll";
 import { ThemeContext } from "../../context/ThemeContext";
 
-interface PROPS {
-  homeRef: React.RefObject<HTMLDivElement>;
-  skillsRef: React.RefObject<HTMLDivElement>;
-  educationRef: React.RefObject<HTMLDivElement>;
-  aboutMeRef: React.RefObject<HTMLDivElement>;
-  contactRef: React.RefObject<HTMLDivElement>;
-}
-
-export const Navbar: React.FC<PROPS> = ({
-  homeRef,
-  skillsRef,
-  educationRef,
-  aboutMeRef,
-  contactRef
-}) => {
+export const Navbar: React.FC = () => {
   const context = useContext(ThemeContext);
   const { theme, toggleTheme } = context;
 
@@ -30,15 +18,18 @@ export const Navbar: React.FC<PROPS> = ({
     >
       <div className={`nav nav--${theme}`}>
         <ul className="navbar">
-          <li
-            onClick={(): void => homeRef.current?.scrollIntoView()}
+          <li className={`navbar__item navbar__item--${theme}`}>Home</li>
+          <li className={`navbar__item navbar__item--${theme}`}>Skills</li>
+          <Link
+            to="projects-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
             className={`navbar__item navbar__item--${theme}`}
           >
-            Home
-          </li>
-          <li className={`navbar__item navbar__item--${theme}`}>Skills</li>
+            Education
+          </Link>
           <li className={`navbar__item navbar__item--${theme}`}>Projects</li>
-          <li className={`navbar__item navbar__item--${theme}`}>Education</li>
           <li className={`navbar__item navbar__item--${theme}`}>About Me</li>
           <li className={`navbar__item navbar__item--${theme}`}>Contact</li>
         </ul>

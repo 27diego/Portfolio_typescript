@@ -65,6 +65,7 @@
     }
     &--light {
       background-color: $dark-white;
+      color: black;
       &::placeholder {
         color: $light-black;
         font-size: 1.3rem;

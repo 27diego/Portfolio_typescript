@@ -4,14 +4,14 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 110%;
+  height: 135%;
   width: 30rem;
   font-size: 2rem;
   transition: all 0.8s ease;
   z-index: 7;
 
   &--active {
-    width: 63rem;
+    width: 80rem;
     z-index: 10;
     transform: scale(1.05);
   }
@@ -79,7 +79,7 @@
     }
 
     &--light {
-      background-color: $light-card-face;
+      background-color: $light-grey;
     }
 
     &--dark {

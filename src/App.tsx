@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <ThemeContextProvider>
-        <div className="App" style={{ height: "100%" }}>
+        <div className="App" style={{ height: "100%", position: "relative" }}>
           <Navbar />
           <Intro />
           <Love />

@@ -11,7 +11,7 @@ export const Card: React.FC<CardProps> = ({
   logo,
   header,
   paragraph,
-  longParagraph
+  longParagraph,
 }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
@@ -23,8 +23,6 @@ export const Card: React.FC<CardProps> = ({
     setExpand(false);
     setShow(false);
   };
-
-  console.log(show);
 
   return (
     <div

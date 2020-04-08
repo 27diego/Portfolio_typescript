@@ -1,7 +1,9 @@
 @import "../../styles/variables";
 
 .navContainer {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   height: auto;
 
@@ -10,19 +12,23 @@
   transition: all 0.5s;
 
   &--dark {
-    background-color: $dark-bg;
+    background-color: rgba($color: $dark-bg, $alpha: 0);
   }
 
   &--light {
-    background-color: $light-bg;
+    background-color: rgba($color: $light-bg, $alpha: 0);
   }
 
   &--hide {
-    margin-top: -15rem;
+    // margin-top: -15rem;
+    // top: 0;
+    transform: translateY(-14rem);
   }
 
   &--show {
-    margin-top: 0rem;
+    // margin-top: 0rem;
+    // bottom: -2rem;
+    transform: translateY(0rem);
   }
 }
 

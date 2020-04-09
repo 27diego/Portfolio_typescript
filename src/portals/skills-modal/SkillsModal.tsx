@@ -11,12 +11,9 @@ export const SkillsModal: React.FC<SkillsModal> = ({
   setActiveLabel,
   activeLabel,
 }) => {
-  const closeModal = (): void => {
-    setModal(false);
-  };
-
   const [expand, setExpand] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
+
   useEffect(() => {
     setTimeout(() => {
       setActive(true);
@@ -27,14 +24,14 @@ export const SkillsModal: React.FC<SkillsModal> = ({
     setExpand(true);
   }, []);
 
-  console.log(selected);
+  const closeModal = (): void => {
+    setModal(false);
+  };
 
   return (
     <AnimatePresence>
       {modal && (
         <motion.div
-          // animate={{ x: -100, y: -150 }}
-          // transition={{ ease: "easeOut", duration: 0.5 }}
           className={`Container__Modal--skills Container__Modal--skills--${expand} Container__Modal--skills--${expand}--${activeLabel}`}
         >
           <div

@@ -85,8 +85,8 @@
 }
 
 .navbtn {
-  height: 7.5rem;
-  width: 7.5rem;
+  height: 6.5rem;
+  width: 6.5rem;
 
   border-radius: 50%;
   display: block;
@@ -168,7 +168,7 @@
   display: block;
   border: 1px solid $dark-white;
 
-  &--dark {
+  &--light {
     background-color: $dark-red;
   }
 
@@ -176,7 +176,7 @@
     width: 100%;
     margin-top: 0.4rem;
 
-    &--dark {
+    &--light {
       margin-left: 0.4rem;
       margin-bottom: 0.3rem;
     }

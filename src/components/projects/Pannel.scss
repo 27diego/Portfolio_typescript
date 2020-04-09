@@ -94,11 +94,28 @@
   }
 
   &__github {
-    height: 10rem;
-    grid-area: 4/9;
-    display: block;
-    margin-left: 4rem;
-    cursor: pointer;
+    height: 80%;
+    fill: #fff;
+    &--wrapper {
+      height: 8.5rem;
+
+      width: 65%;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 4rem;
+      cursor: pointer;
+      background-color: $dark-black;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &--link {
+        grid-area: 4/10/5/12;
+      }
+    }
   }
 }
 .content {

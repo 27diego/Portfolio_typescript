@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .container--Card {
-  height: 85vh;
+  height: 90vh;
   padding: 1rem 5rem 3rem 5rem;
 
   display: grid;
@@ -15,8 +15,6 @@
   &--dark {
     background-color: $dark-bg;
   }
-
-  overflow: hidden;
 }
 
 .Card {
@@ -37,7 +35,9 @@
   &__container {
     height: 80%;
     width: 105%;
-    display: flex;
-    justify-content: space-evenly;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
   }
 }

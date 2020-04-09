@@ -3,10 +3,6 @@ import "./Card.scss";
 
 import { ThemeContext } from "../../context/ThemeContext";
 
-interface Props {
-  cardProps: CardProps;
-}
-
 export const Card: React.FC<CardProps> = ({
   logo,
   header,

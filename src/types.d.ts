@@ -10,6 +10,7 @@ type Projects = {
   logo: string;
   landing: string;
   icons: string[];
+  link: string;
 };
 
 type SkillsModal = {

@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
       >
         <img
           className={`img img--${theme}`}
-          src={theme === "dark" ? dark : sunny}
+          src={theme === "dark" ? sunny : dark}
           alt="sun"
         />
       </button>

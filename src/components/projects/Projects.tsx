@@ -26,18 +26,21 @@ export const Projects: React.FC = () => {
       logo: "CIG logo",
       landing: "landingpage",
       icons: [],
+      link: "",
     },
     {
       title: "Monterey Mushrooms",
       logo: MMLogo,
       landing: sopIndex,
       icons: [react, redux, typescript, docker, node, mongo],
+      link: "https://github.com/27diego/MM-index",
     },
     {
       title: "Smart Brain",
       logo: "SmartBrain logo",
       icons: ["Some", "icons", "here"],
       landing: "landingpage",
+      link: "",
     },
   ]);
 
@@ -51,6 +54,7 @@ export const Projects: React.FC = () => {
             logo={item.logo}
             icons={item.icons}
             landing={item.landing}
+            link={item.link}
           />
         ))}
       </div>

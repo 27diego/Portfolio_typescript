@@ -45,9 +45,8 @@ export const Love: React.FC = () => {
       <h1 className={`Card__header Card__header--${theme}`}>What I Do... </h1>
       <div className="Card__container">
         {Cards.map((item) => (
-          <div className="Cardsss">
+          <div className="Cardsss" key={item.header}>
             <Card
-              key={item.header}
               logo={item.logo}
               header={item.header}
               paragraph={item.paragraph}

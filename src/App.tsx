@@ -33,7 +33,6 @@ class App extends React.Component {
             <Education />
           </Element>
           <Element id="contact-destination" name="contact-destination">
-            {" "}
             <Outro />
           </Element>
         </div>

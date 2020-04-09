@@ -16,17 +16,16 @@ import node from "../../images/brand logos/Back end/node-dot-js.svg";
 import postgresql from "../../images/brand logos/Back end/postgresql.svg";
 import redis from "../../images/brand logos/Back end/redis.svg";
 
-// import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
-// import { Overlay } from "../../portals/skills-modal/overlay/Overlay";
+import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
 
 export const Skills: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
   const [selected, setSelected] = useState<string>(react);
 
-  console.log("shut up ts unused", modal, selected);
-
   const context = useContext(ThemeContext);
   const { theme } = context;
+
+  console.log("modal: ", modal);
 
   return (
     <div className={`Container--Skills Container--Skills--${theme}`}>
@@ -239,14 +238,13 @@ export const Skills: React.FC = () => {
         </div>
       </div>
 
-      {/* {modal ? (
+      {modal ? (
         <React.Fragment>
-          <SkillsModal selected={selected} setModal={setModal} />
-          <Overlay />
+          <SkillsModal selected={selected} modal={modal} setModal={setModal} />
         </React.Fragment>
       ) : (
         ""
-      )} */}
+      )}
     </div>
   );
 };

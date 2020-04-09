@@ -4,47 +4,84 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 200;
-
-  height: 50rem;
-  width: 90rem;
   padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-
   background-color: $dark-black;
   border-radius: 5px;
   border: 1px solid rgba($dark-grey-border, 0.5);
+
+  transition: all 1s;
+
+  &--true {
+    height: 40rem;
+    width: 60rem;
+  }
+  &--false {
+    height: 20rem;
+    width: 30rem;
+  }
 }
 
 .modal {
   &__icon {
     height: 20rem;
     width: auto;
-    grid-area: 1/5/2/8;
+    position: absolute;
+    right: 30%;
+
+    transition: all 0.5s;
+
+    &--false {
+      opacity: 0;
+    }
+
+    &--true {
+      opacity: 1;
+    }
   }
 
   &__skill {
     font-size: 2rem;
     color: $dark-white;
+    transition: all 1s;
+
+    &--false {
+      opacity: 0;
+    }
+
+    &--true {
+      opacity: 1;
+    }
 
     &--1 {
-      grid-area: 3/3/4/4;
-      align-self: end;
+      position: absolute;
+      top: 60%;
+      left: 45%;
+
+      &--active {
+        top: 60%;
+        left: 10%;
+      }
     }
     &--2 {
-      grid-area: 4/6;
-      justify-self: center;
+      position: absolute;
+      top: 60%;
+      left: 45%;
+      &--active {
+        top: 70%;
+        left: 45%;
+      }
     }
     &--3 {
-      grid-area: 3/9/4 / span 2;
-      align-self: end;
-      justify-self: center;
-      margin-right: 3rem;
+      position: absolute;
+      top: 60%;
+      right: 40%;
+
+      &--active {
+        top: 60%;
+        right: 10%;
+      }
     }
   }
 }
@@ -54,8 +91,10 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  position: relative;
-  grid-column: -1;
+  position: absolute;
+
+  right: 1rem;
+  top: 1rem;
 
   &:hover {
     background: rgba($dark-red, 0.5);

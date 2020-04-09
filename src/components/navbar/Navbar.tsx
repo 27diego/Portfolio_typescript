@@ -28,6 +28,15 @@ export const Navbar: React.FC = () => {
             Home
           </Link>
           <Link
+            to="projects-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            Projects
+          </Link>
+          <Link
             to="skills-destination"
             spy={true}
             smooth={true}
@@ -45,15 +54,7 @@ export const Navbar: React.FC = () => {
           >
             Education
           </Link>
-          <Link
-            to="projects-destination"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className={`navbar__item navbar__item--${theme}`}
-          >
-            Projects
-          </Link>
+
           <Link
             to="about-destination"
             spy={true}

@@ -18,10 +18,26 @@ export const Navbar: React.FC = () => {
     >
       <div className={`nav nav--${theme}`}>
         <ul className="navbar">
-          <li className={`navbar__item navbar__item--${theme}`}>Home</li>
-          <li className={`navbar__item navbar__item--${theme}`}>Skills</li>
           <Link
-            to="projects-destination"
+            to="home-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            Home
+          </Link>
+          <Link
+            to="skills-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            Skills
+          </Link>
+          <Link
+            to="education-destination"
             spy={true}
             smooth={true}
             duration={500}
@@ -29,9 +45,33 @@ export const Navbar: React.FC = () => {
           >
             Education
           </Link>
-          <li className={`navbar__item navbar__item--${theme}`}>Projects</li>
-          <li className={`navbar__item navbar__item--${theme}`}>About Me</li>
-          <li className={`navbar__item navbar__item--${theme}`}>Contact</li>
+          <Link
+            to="projects-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            Projects
+          </Link>
+          <Link
+            to="about-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            About Me
+          </Link>
+          <Link
+            to="contact-destination"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            Contact
+          </Link>
         </ul>
       </div>
       <button

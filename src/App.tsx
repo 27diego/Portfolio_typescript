@@ -19,16 +19,23 @@ class App extends React.Component {
       <ThemeContextProvider>
         <div className="App" style={{ height: "100%", position: "relative" }}>
           <Navbar />
-          <Intro />
+          <Element id="home-destination" name="home-destination">
+            <Intro />
+          </Element>
           <Love />
           <Element id="projects-destination" name="projects-destination">
             <Projects />
           </Element>
-
-          <Skills />
-          <Education />
-          <Outro />
-          {/* <More /> */}
+          <Element id="skills-destination" name="skills-destination">
+            <Skills />
+          </Element>
+          <Element id="education-destination" name="education-destination">
+            <Education />
+          </Element>
+          <Element id="contact-destination" name="contact-destination">
+            {" "}
+            <Outro />
+          </Element>
         </div>
       </ThemeContextProvider>
     );

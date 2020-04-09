@@ -1,6 +1,17 @@
 import React, { useState, useContext } from "react";
 import "./Projects.scss";
 
+import MMLogo from "../../images/MMlogo.png";
+import sopIndex from "../../images/sopIndex.png";
+
+//logos
+import react from "../../images/brand logos/Front end/React-icon.svg";
+import redux from "../../images/brand logos/Front end/redux.svg";
+import typescript from "../../images/brand logos/Front end/typescript.svg";
+import docker from "../../images/brand logos/Back end/docker.svg";
+import node from "../../images/brand logos/Back end/node-dot-js.svg";
+import mongo from "../../images/brand logos/Back end/mongodb.svg";
+
 import { Pannel } from "./Pannel";
 import { ThemeContext } from "../../context/ThemeContext";
 
@@ -13,27 +24,27 @@ export const Projects: React.FC = () => {
     {
       title: "CIG",
       logo: "CIG logo",
-      icons: ["Some", "icons", "here"],
-      landing: "landingpage"
+      landing: "landingpage",
+      icons: [],
     },
     {
       title: "Monterey Mushrooms",
-      logo: "MM logo",
-      icons: ["Some", "icons", "here"],
-      landing: "landingpage"
+      logo: MMLogo,
+      landing: sopIndex,
+      icons: [react, redux, typescript, docker, node, mongo],
     },
     {
       title: "Smart Brain",
       logo: "SmartBrain logo",
       icons: ["Some", "icons", "here"],
-      landing: "landingpage"
-    }
+      landing: "landingpage",
+    },
   ]);
 
   return (
     <div className={`Container--Projects Container--Projects--${theme}`}>
-      <React.Fragment>
-        {projects.map(item => (
+      <div className="projects">
+        {projects.map((item) => (
           <Pannel
             key={item.title}
             title={item.title}
@@ -42,7 +53,7 @@ export const Projects: React.FC = () => {
             landing={item.landing}
           />
         ))}
-      </React.Fragment>
+      </div>
     </div>
   );
 };

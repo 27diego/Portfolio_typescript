@@ -16,12 +16,14 @@ import node from "../../images/brand logos/Back end/node-dot-js.svg";
 import postgresql from "../../images/brand logos/Back end/postgresql.svg";
 import redis from "../../images/brand logos/Back end/redis.svg";
 
-import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
-import { Overlay } from "../../portals/skills-modal/overlay/Overlay";
+// import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
+// import { Overlay } from "../../portals/skills-modal/overlay/Overlay";
 
 export const Skills: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
   const [selected, setSelected] = useState<string>(react);
+
+  console.log("shut up ts unused", modal, selected);
 
   const context = useContext(ThemeContext);
   const { theme } = context;

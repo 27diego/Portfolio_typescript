@@ -17,7 +17,7 @@ export const Love: React.FC = () => {
       paragraph:
         "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
       longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
     },
     {
       logo: developLogo,
@@ -25,7 +25,7 @@ export const Love: React.FC = () => {
       paragraph:
         "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
       longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
     },
     {
       logo: ProblemSolveLogo,
@@ -33,8 +33,8 @@ export const Love: React.FC = () => {
       paragraph:
         "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
       longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio."
-    }
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
+    },
   ]);
 
   const context = useContext(ThemeContext);
@@ -44,14 +44,16 @@ export const Love: React.FC = () => {
     <div className={`container--Card container--Card--${theme}`}>
       <h1 className={`Card__header Card__header--${theme}`}>What I Do... </h1>
       <div className="Card__container">
-        {Cards.map(item => (
-          <Card
-            key={item.header}
-            logo={item.logo}
-            header={item.header}
-            paragraph={item.paragraph}
-            longParagraph={item.longParagragh}
-          />
+        {Cards.map((item) => (
+          <div className="Cardsss">
+            <Card
+              key={item.header}
+              logo={item.logo}
+              header={item.header}
+              paragraph={item.paragraph}
+              longParagraph={item.longParagragh}
+            />
+          </div>
         ))}
       </div>
     </div>

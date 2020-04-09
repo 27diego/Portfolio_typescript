@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import "./Skills.scss";
 
 import { ThemeContext } from "../../context/ThemeContext";
@@ -27,10 +27,6 @@ export const Skills: React.FC = () => {
 
   const context = useContext(ThemeContext);
   const { theme } = context;
-
-  useEffect(() => {
-    console.log("Component did mount!!");
-  }, []);
 
   return (
     <div className={`Container--Skills Container--Skills--${theme}`}>

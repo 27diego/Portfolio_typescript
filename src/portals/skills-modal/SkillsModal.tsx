@@ -8,6 +8,8 @@ export const SkillsModal: React.FC<SkillsModal> = ({
   selected,
   modal,
   setModal,
+  setActiveLabel,
+  activeLabel,
 }) => {
   const closeModal = (): void => {
     setModal(false);
@@ -25,17 +27,23 @@ export const SkillsModal: React.FC<SkillsModal> = ({
     setExpand(true);
   }, []);
 
-  console.log("expand: ", expand);
+  console.log(selected);
 
   return (
     <AnimatePresence>
       {modal && (
         <motion.div
-          // animate={{ x: -300, y: -150 }}
+          // animate={{ x: -100, y: -150 }}
           // transition={{ ease: "easeOut", duration: 0.5 }}
-          className={`Container__Modal--skills Container__Modal--skills--${expand}`}
+          className={`Container__Modal--skills Container__Modal--skills--${expand} Container__Modal--skills--${expand}--${activeLabel}`}
         >
-          <div onClick={closeModal} className="container--btn--exit">
+          <div
+            onClick={(): void => {
+              closeModal();
+              setActiveLabel("");
+            }}
+            className="container--btn--exit"
+          >
             <div className="btn--exit">&nbsp;</div>
           </div>
           <img

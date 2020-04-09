@@ -2,8 +2,7 @@
 
 .Container__Modal--skills {
   position: absolute;
-  top: 50%;
-  left: 50%;
+
   transform: translate(-50%, -50%);
   z-index: 200;
   padding: 2rem;
@@ -11,15 +10,71 @@
   border-radius: 5px;
   border: 1px solid rgba($dark-grey-border, 0.5);
 
-  transition: all 1s;
+  transition: all 0.8s;
 
   &--true {
     height: 40rem;
     width: 60rem;
+    top: 50%;
+    left: 50%;
   }
+
   &--false {
-    height: 20rem;
-    width: 30rem;
+    height: 17rem;
+    width: 20rem;
+
+    &--react {
+      top: 30.5%;
+      left: 12.3%;
+    }
+
+    &--html {
+      top: 57.5%;
+      left: 12.3%;
+    }
+    &--redux {
+      top: 85%;
+      left: 12.3%;
+    }
+
+    &--css {
+      top: 30.5%;
+      left: 35.3%;
+    }
+
+    &--js {
+      top: 57.5%;
+      left: 35.3%;
+    }
+    &--npm {
+      top: 85%;
+      left: 35.3%;
+    }
+
+    &--node {
+      top: 30.5%;
+      left: 62.3%;
+    }
+
+    &--mongodb {
+      top: 30.5%;
+      left: 85.3%;
+    }
+
+    &--docker {
+      top: 57.5%;
+      left: 62.3%;
+    }
+
+    &--redis {
+      top: 57.5%;
+      left: 85.3%;
+    }
+
+    &--postgresql {
+      top: 85%;
+      left: 76%;
+    }
   }
 }
 

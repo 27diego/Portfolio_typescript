@@ -39,56 +39,89 @@
     }
 
     &--react {
+      &--active {
+        fill: $react-logo;
+      }
       &:hover {
         fill: $react-logo;
       }
     }
     &--css {
+      &--active {
+        fill: $css3-logo;
+      }
       &:hover {
         fill: $css3-logo;
       }
     }
     &--html {
+      &--active {
+        fill: $html5-logo;
+      }
       &:hover {
         fill: $html5-logo;
       }
     }
     &--js {
+      &--active {
+        fill: $javascript-logo;
+      }
       &:hover {
         fill: $javascript-logo;
       }
     }
     &--redux {
+      &--active {
+        fill: $redux-logo;
+      }
       &:hover {
         fill: $redux-logo;
       }
     }
     &--npm {
+      &-active {
+        fill: $npm-logo;
+      }
       &:hover {
         fill: $npm-logo;
       }
     }
     &--node {
+      &--active {
+        fill: $nodejs-logo;
+      }
       &:hover {
         fill: $nodejs-logo;
       }
     }
     &--mongodb {
+      &--active {
+        fill: $mongoDB-logo;
+      }
       &:hover {
         fill: $mongoDB-logo;
       }
     }
     &--docker {
+      &--active {
+        fill: $docker-logo;
+      }
       &:hover {
         fill: $docker-logo;
       }
     }
     &--redis {
+      &--active {
+        fill: $redis-logo;
+      }
       &:hover {
         fill: $redis-logo;
       }
     }
     &--postgresql {
+      &--active {
+        fill: $postgress-logo;
+      }
       &:hover {
         fill: $postgress-logo;
       }

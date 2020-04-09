@@ -17,4 +17,6 @@ type SkillsModal = {
   selected: string;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
   modal: boolean;
+  setActiveLabel: React.Dispatch<React.SetStateAction<string>>;
+  activeLabel: string;
 };

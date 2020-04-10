@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./SkillsModal.scss";
+
+import { ThemeContext } from "../../context/ThemeContext";
 
 import react from "../../images/reactlogo.png";
 
@@ -9,6 +11,9 @@ export const SkillsModal: React.FC<SkillsModal> = ({
   setActiveLabel,
   activeLabel,
 }) => {
+  const context = useContext(ThemeContext);
+  const { theme } = context;
+
   const [expand, setExpand] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
 
@@ -28,7 +33,7 @@ export const SkillsModal: React.FC<SkillsModal> = ({
 
   return (
     <div
-      className={`Container__Modal--skills Container__Modal--skills--${expand} Container__Modal--skills--${expand}--${activeLabel}`}
+      className={`Container__Modal--skills Container__Modal--skills--${theme} Container__Modal--skills--${expand} Container__Modal--skills--${expand}--${activeLabel}`}
     >
       <div
         onClick={(): void => {

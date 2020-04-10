@@ -28,8 +28,6 @@ export const Skills: React.FC = () => {
   const context = useContext(ThemeContext);
   const { theme } = context;
 
-  console.log(active);
-
   return (
     <div className={`Container--Skills Container--Skills--${theme}`}>
       <div className={`skills__header skills__header--${theme}`}>

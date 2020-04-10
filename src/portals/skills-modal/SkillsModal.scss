@@ -6,11 +6,20 @@
   transform: translate(-50%, -50%);
   z-index: 200;
   padding: 2rem;
-  background-color: $dark-black;
   border-radius: 5px;
   border: 1px solid rgba($dark-grey-border, 0.5);
 
   transition: all 0.8s;
+
+  &--dark {
+    background-color: $dark-black;
+    color: #fff;
+  }
+
+  &--light {
+    background-color: $light-blue-square-background;
+    color: $dark-black;
+  }
 
   &--true {
     height: 40rem;
@@ -98,7 +107,6 @@
 
   &__skill {
     font-size: 2rem;
-    color: $dark-white;
     transition: all 1s;
 
     &--false {

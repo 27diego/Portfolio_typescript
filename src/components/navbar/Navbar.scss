@@ -20,15 +20,54 @@
   }
 
   &--hide {
-    // margin-top: -15rem;
-    // top: 0;
     transform: translateY(-14rem);
   }
 
   &--show {
-    // margin-top: 0rem;
-    // bottom: -2rem;
     transform: translateY(0rem);
+  }
+
+  .project__github--wrapper--link {
+    position: absolute;
+    left: 5rem;
+    top: 3.5rem;
+  }
+
+  .githubLabel {
+    background-color: $dark-black;
+    height: 3rem;
+    padding: 0.5rem;
+
+    position: absolute;
+    bottom: 7rem;
+    left: 4rem;
+
+    border-radius: 5px;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid #fff 1px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-bottom-color: #fff;
+      border-top: 0;
+      margin-left: 2px;
+      margin-top: -5px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #fff;
+    }
   }
 }
 
@@ -159,8 +198,8 @@
 
 .themebtn {
   position: absolute;
-  top: 4rem;
-  right: 9rem;
+  top: 4.5rem;
+  right: 11rem;
   height: 6.5rem;
   width: 6.5rem;
   background-color: $dark-black;

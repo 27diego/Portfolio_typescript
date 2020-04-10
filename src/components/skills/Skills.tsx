@@ -18,6 +18,8 @@ import redis from "../../images/brand logos/Back end/redis.svg";
 
 import { SkillsModal } from "../../portals/skills-modal/SkillsModal";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 export const Skills: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
   const [selected, setSelected] = useState<string>(react);
@@ -271,19 +273,22 @@ export const Skills: React.FC = () => {
         </div>
       </div>
 
-      {modal ? (
-        <React.Fragment>
-          <SkillsModal
-            setActiveLabel={setActive}
-            activeLabel={active}
-            selected={selected}
-            modal={modal}
-            setModal={setModal}
-          />
-        </React.Fragment>
-      ) : (
-        ""
-      )}
+      <AnimatePresence>
+        {modal && (
+          <motion.div
+            initial={false}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <SkillsModal
+              setActiveLabel={setActive}
+              activeLabel={active}
+              selected={selected}
+              setModal={setModal}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

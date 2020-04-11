@@ -35,7 +35,14 @@
     }
     &__description {
       padding-top: 2rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+
+      &--light {
+        color: #000;
+      }
+      &--dark {
+        color: #fff;
+      }
     }
 
     &--false {

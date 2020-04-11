@@ -92,7 +92,7 @@
     height: 20rem;
     width: auto;
     position: absolute;
-    right: 30%;
+    right: 31%;
 
     transition: all 0.5s;
 
@@ -130,10 +130,10 @@
     &--2 {
       position: absolute;
       top: 60%;
-      left: 45%;
+      left: 48%;
       &--active {
-        top: 70%;
-        left: 45%;
+        top: 80%;
+        left: 48%;
       }
     }
     &--3 {
@@ -143,7 +143,7 @@
 
       &--active {
         top: 60%;
-        right: 10%;
+        right: 7%;
       }
     }
   }

@@ -14,14 +14,12 @@
     background-color: $light-bg;
   }
 
-  .img {
-    &--emoji {
-      animation: iconShow 1s forwards;
+  .img--emoji {
+    animation: iconShow 1s forwards;
 
-      height: 20rem;
-      display: block;
-      margin: 0 auto;
-    }
+    height: 20rem;
+    display: block;
+    margin: 0 auto;
   }
 
   .greeting {

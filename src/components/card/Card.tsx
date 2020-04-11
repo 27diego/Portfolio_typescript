@@ -41,7 +41,13 @@ export const Card: React.FC<CardProps> = ({
         <div
           className={`Card__content Card__content--front Card__content--${theme}`}
         >
-          <img className="Card__logo" src={logo} alt="brush" />
+          <img
+            className={`Card__logo Card__logo--${
+              header.toLocaleLowerCase() === "problem solve" ? "problem" : ""
+            }`}
+            src={logo}
+            alt="brush"
+          />
           <h2 className="Card__content__header">{header}</h2>
         </div>
       </div>
@@ -58,7 +64,7 @@ export const Card: React.FC<CardProps> = ({
           expand ? "active" : "unactive"
         } Card__side--${theme} Card__side--back`}
       >
-        {show ? (
+        {show && (
           <div className={`hidden-container hidden-container--${theme}`}>
             <h1>Web Development</h1>
             <h3>HTML / CSS</h3>
@@ -66,12 +72,6 @@ export const Card: React.FC<CardProps> = ({
               Creating a strong foundation for a website means getting the HTML
               and CSS architecture right. If you’ve got a design I can create
               the front-end code for it.
-            </p>
-            <h3>WordPress</h3>
-            <p>
-              Almost all of the websites I make are done using WordPress and the
-              reason is simple: It just works. You can easily update every piece
-              of content, turn sections on or off and so much more.
             </p>
             <h3>Performance</h3>
             <p>
@@ -83,13 +83,6 @@ export const Card: React.FC<CardProps> = ({
               websites.
             </p>
           </div>
-        ) : (
-          // <div className={`hidden-container hidden-container--${theme}`}>
-          //   <div className="loading-dots">
-          //     <div className="dots">&nbsp; </div>
-          //   </div>
-          // </div>
-          ""
         )}
         <div
           className={`Card__content Card__content--${

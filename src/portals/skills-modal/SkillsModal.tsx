@@ -10,6 +10,7 @@ export const SkillsModal: React.FC<SkillsModal> = ({
   setModal,
   setActiveLabel,
   activeLabel,
+  skills,
 }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
@@ -54,21 +55,21 @@ export const SkillsModal: React.FC<SkillsModal> = ({
           active ? "active" : ""
         }`}
       >
-        Context
+        {skills.one}
       </div>
       <div
         className={`modal__skill modal__skill--${expand} modal__skill--2 modal__skill--2--${
           active ? "active" : ""
         }`}
       >
-        Hooks
+        {skills.two}
       </div>
       <div
         className={`modal__skill modal__skill--${expand} modal__skill--3 modal__skill--3--${
           active ? "active" : ""
         }`}
       >
-        Server Side
+        {skills.three}
       </div>
     </div>
   );

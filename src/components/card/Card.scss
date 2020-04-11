@@ -66,6 +66,10 @@
 
   &__logo {
     height: 8.5rem;
+
+    &--problem {
+      transform: rotate(180deg);
+    }
   }
 
   &__content {
@@ -123,6 +127,8 @@
   right: 0;
   z-index: 1;
   font-size: 1.3rem;
+
+  overflow: scroll;
 
   &--dark {
     color: $dark-white;

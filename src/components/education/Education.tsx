@@ -16,26 +16,26 @@ export const Education: React.FC = () => {
       title: "OS",
       icon: os,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias assumenda eligendi quasi! Ducimus repellendus rem porro, voluptatibus aperiam optio rerum incidunt? Autem earum excepturi at labore, consectetur sequi nulla?"
+        "Covered operating systems at a high and low level including hardware and design of an operating system. Learned the Linux command line, writing shell scripts, and work with GNU utilities such as awk, sed, and make. Also covered process management, memory management, file systems and concurrency",
     },
     {
       title: "Databases",
       icon: databases,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias assumenda eligendi quasi! Ducimus repellendus rem porro, voluptatibus aperiam optio rerum incidunt? Autem earum excepturi at labore, consectetur sequi nulla?"
+        "Studied database use and design with focus on relational databases and a touch on NoSQL. Focused on designing relational schemas, writting SQL queries, accessing DBs programmatically and performing database administration.",
     },
     {
       title: "Algorithms",
       icon: algorithms,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias assumenda eligendi quasi! Ducimus repellendus rem porro, voluptatibus aperiam optio rerum incidunt? Autem earum excepturi at labore, consectetur sequi nulla?"
+        "Learned fundemental algorithm design techniques and important data structures to solve problems involving recursion, hashes, heaps, graphs, trees, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer etc. and applied them to solve problems from a Facebook engineer.",
     },
     {
       title: "Networks",
       icon: networks,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias assumenda eligendi quasi! Ducimus repellendus rem porro, voluptatibus aperiam optio rerum incidunt? Autem earum excepturi at labore, consectetur sequi nulla?"
-    }
+        "Learned about Networking ranging through Telecomm and Data Comm technology, internetworking protocols such as TCP and IP. Covered Local Area Network and Wide Area Network and the way the Internet works at a high and low level as well as emerging trends like voice other the network.",
+    },
   ]);
 
   const context = useContext(ThemeContext);
@@ -52,7 +52,7 @@ export const Education: React.FC = () => {
         <img className="EdHeader__img" src={school} alt="csumb logo" />
       </div>
       <div className="courses">
-        {courses.map(item => (
+        {courses.map((item) => (
           <Course
             key={item.title}
             title={item.title}

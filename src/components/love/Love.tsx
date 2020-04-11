@@ -15,7 +15,7 @@ export const Love: React.FC = () => {
       logo: designLogo,
       header: "Design",
       paragraph:
-        "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
+        "From a sketch pad to Adobe XD I design all the components on my projects coming up with a beautiful UI, animations and color schemes",
       longParagragh:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
     },
@@ -23,7 +23,7 @@ export const Love: React.FC = () => {
       logo: developLogo,
       header: "Develop",
       paragraph:
-        "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
+        "Every project of mine is developed in an organic way, with sticking to my designs and using pure scss and javascript I am able to develop components from scratch and make them come to life",
       longParagragh:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
     },
@@ -31,7 +31,7 @@ export const Love: React.FC = () => {
       logo: ProblemSolveLogo,
       header: "Problem Solve",
       paragraph:
-        "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
+        "I believe that problem solving is a critical part of designing and developing, so I always try to improve my skills practicing my problem solving from coding to communication",
       longParagragh:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
     },

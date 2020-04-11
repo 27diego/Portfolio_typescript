@@ -55,7 +55,7 @@ export const Projects: React.FC = () => {
       logo: "",
       landing: CIGLanding,
       icons: [react, redux, css, node, mongo, redis],
-      link: "https://github.com/27diego/SOP_Backend",
+      link: "https://github.com/27diego/CapStone-Backend",
     },
   ]);
 

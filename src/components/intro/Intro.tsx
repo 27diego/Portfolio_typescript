@@ -10,11 +10,10 @@ export const Intro = () => {
   return (
     <div className={`intro intro--${theme}`}>
       <img className="img--emoji" src={logo} alt="emoji" />
-
       <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">
-          I'm an up and coming designer and developer out of Salinas, CA
+          I'm an designer and developer out of Salinas, CA
           <a
             href="http://www.google.com/search?q=Salinas"
             target="_blank"

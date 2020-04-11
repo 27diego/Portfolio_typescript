@@ -21,4 +21,9 @@ type SkillsModal = {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
   setActiveLabel: React.Dispatch<React.SetStateAction<string>>;
   activeLabel: string;
+  skills: {
+    one: string;
+    two: string;
+    three: string;
+  };
 };

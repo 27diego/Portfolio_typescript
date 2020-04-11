@@ -31,7 +31,11 @@ export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
         <div className={`CourseCard__title CourseCard__title--${theme}`}>
           {title}
         </div>
-        <div className="CourseCard__description">{description}</div>
+        <div
+          className={`CourseCard__description CourseCard__description--${theme}`}
+        >
+          {description}
+        </div>
       </div>
       <div
         onMouseEnter={openExpand}

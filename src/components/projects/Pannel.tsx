@@ -6,6 +6,7 @@ import "./Pannel.scss";
 export const Pannel: React.FC<Projects> = ({
   title,
   logo,
+  options,
   icons,
   landing,
   link,
@@ -31,7 +32,12 @@ export const Pannel: React.FC<Projects> = ({
       <div className="content">
         {logo !== "" && (
           <figure className="project__logo--wrapper">
-            <img src={logo} className="project__logo" alt="company logo" />
+            <img
+              src={logo}
+              style={options}
+              className="project__logo"
+              alt="company logo"
+            />
           </figure>
         )}
         <div className="container--icons">

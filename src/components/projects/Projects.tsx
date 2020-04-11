@@ -35,6 +35,9 @@ export const Projects: React.FC = () => {
     {
       title: "Smart Brain",
       logo: brain,
+      options: {
+        width: "8rem",
+      },
       icons: [react, js, css, postgresql, redis],
       landing: smartbrain,
       link: "https://github.com/27diego/smart-brain-front",
@@ -64,6 +67,7 @@ export const Projects: React.FC = () => {
             key={item.title}
             title={item.title}
             logo={item.logo}
+            options={item.options}
             icons={item.icons}
             landing={item.landing}
             link={item.link}

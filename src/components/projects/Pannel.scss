@@ -35,17 +35,33 @@
   &--noExpand {
     width: (100% / 3);
 
+    // &__title {
+    //   text-align: center;
+    //   width: 30rem;
+    //   color: $dark-white;
+    //   font-weight: 100;
+    //   font-size: 5rem;
+
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%) rotate(270deg);
+    // }
+
     &__title {
       text-align: center;
-      width: 30rem;
+      width: 10%;
       color: $dark-white;
       font-weight: 100;
       font-size: 5rem;
 
+      margin-top: 2rem;
+      grid-area: 1/2/2/5;
+
+      transform: rotate(0deg);
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(270deg);
+      left: 1.5rem;
+      top: -1.5rem;
     }
   }
 
@@ -109,7 +125,7 @@
       }
 
       &--link {
-        grid-area: 4/10/5/12;
+        grid-area: 5/10/6/12;
       }
     }
   }

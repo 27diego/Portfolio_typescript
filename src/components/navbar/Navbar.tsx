@@ -13,6 +13,12 @@ export const Navbar: React.FC = () => {
   const [show, setShow] = useState("hide");
   const [label, setLabel] = useState<boolean>(false);
 
+  const closeNav = () => {
+    setTimeout(() => {
+      setShow("hide");
+    }, 7000);
+  };
+
   return (
     <div
       className={`navContainer navContainer--${show} navContainer--${theme}`}
@@ -101,7 +107,10 @@ export const Navbar: React.FC = () => {
         </ul>
       </div>
       <button
-        onClick={() => setShow(show === "show" ? "hide" : "show")}
+        onClick={() => {
+          setShow(show === "show" ? "hide" : "show");
+          closeNav();
+        }}
         className={`navbtn navbtn--${show} navbtn--${theme}`}
       ></button>
 

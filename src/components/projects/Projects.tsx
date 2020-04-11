@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Monterey Mushrooms",
-      logo: "",
+      logo: MMLogo,
       landing: sopIndex,
       icons: [react, redux, typescript, scss, docker, node, mongo],
       link: "https://github.com/27diego/MM-index",

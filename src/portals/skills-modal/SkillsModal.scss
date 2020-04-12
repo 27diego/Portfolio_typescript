@@ -151,8 +151,8 @@
 
 .container--btn--exit {
   background-color: $dark-red;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   position: absolute;
 
@@ -166,12 +166,12 @@
 
   .btn--exit {
     height: 1px;
-    width: 3rem;
+    width: 2rem;
     // background-color: white;
 
     &::after,
     &::before {
-      width: 3rem;
+      width: 1.5rem;
       height: 2px;
       background-color: $dark-white;
       display: inline-block;
@@ -182,7 +182,7 @@
       content: "";
       position: absolute;
       top: 48%;
-      left: 12%;
+      left: 19%;
       // transform: translateY(-50%);
     }
 

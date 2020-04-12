@@ -3,6 +3,12 @@ type CardProps = {
   header: string;
   paragraph: string;
   longParagraph: string;
+  hiddenDes: {
+    title1: string;
+    paragraph1: string;
+    title2: string;
+    paragraph2: string;
+  };
 };
 
 type Projects = {

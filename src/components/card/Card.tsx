@@ -8,6 +8,7 @@ export const Card: React.FC<CardProps> = ({
   header,
   paragraph,
   longParagraph,
+  hiddenDes,
 }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
@@ -58,7 +59,7 @@ export const Card: React.FC<CardProps> = ({
             ? setShow(false)
             : setTimeout(() => {
                 setShow(true);
-              }, 650);
+              }, 750);
         }}
         className={`Card__side Card__side--${
           expand ? "active" : "unactive"
@@ -66,22 +67,11 @@ export const Card: React.FC<CardProps> = ({
       >
         {show && (
           <div className={`hidden-container hidden-container--${theme}`}>
-            <h1>Web Development</h1>
-            <h3>HTML / CSS</h3>
-            <p>
-              Creating a strong foundation for a website means getting the HTML
-              and CSS architecture right. If you’ve got a design I can create
-              the front-end code for it.
-            </p>
-            <h3>Performance</h3>
-            <p>
-              Having a fast website is key to keeping people around which
-              ultimately converts them into customers. There are a myriad of
-              techniques involved in making a fast website, all of which I’ve
-              spent years learning. I build these techniques into every site I
-              code and can also offer this as a standalone service for existing
-              websites.
-            </p>
+            <h1>{hiddenDes.title1}</h1>
+            {/* <h3>HTML / CSS</h3> */}
+            <p>{hiddenDes.paragraph1}</p>
+            <h1>{hiddenDes.title2}</h1>
+            <p>{hiddenDes.paragraph2}</p>
           </div>
         )}
         <div

@@ -169,6 +169,10 @@
     width: 2rem;
     // background-color: white;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::after,
     &::before {
       width: 1.5rem;
@@ -182,7 +186,7 @@
       content: "";
       position: absolute;
       top: 48%;
-      left: 19%;
+      left: 20%;
       // transform: translateY(-50%);
     }
 

@@ -1,15 +1,37 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import "./Intro.scss";
-import logo from "../../images/brand logos/IMG_0855.png";
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
+import './Intro.scss';
+import logo from '../../images/brand logos/IMG_0855.png';
 
 export const Intro = () => {
   const context = useContext(ThemeContext);
   const { theme } = context;
 
+  const [active, setActive] = useState<boolean>(true);
+
+  setTimeout(() => {
+    setActive(false);
+  }, 3000);
+
   return (
     <div className={`intro intro--${theme}`}>
-      <img className="img--emoji" src={logo} alt="emoji" />
+      <div className="resumeContainer">
+        <a
+          className="intro__resumeLink"
+          href="https://drive.google.com/file/d/13m916VLRIlfxaoAWPSaJQSpLgIivj1Kb/view?usp=sharing"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img className="img--emoji" src={logo} alt="emoji" />
+        </a>
+        <div
+          className={`intro__label intro__label--${
+            active ? 'active' : 'deactive'
+          }`}
+        >
+          <span>Click for my Resume!</span>
+        </div>
+      </div>
       <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">

@@ -35,7 +35,7 @@ export const Intro = () => {
       <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <p className="greeting__body">
-          I'm an designer and developer out of Salinas, CA
+          I am a Developer and aspiring Web Designer out of Salinas, CA
           <a
             href="http://www.google.com/search?q=Salinas"
             target="_blank"

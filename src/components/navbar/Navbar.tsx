@@ -1,21 +1,21 @@
-import React, { useState, useContext } from "react";
-import "./Navbar.scss";
-import sunny from "../../images/Icons/wb_sunny-24px.svg";
-import dark from "../../images/Icons/nights_stay-24px.svg";
+import React, { useState, useContext } from 'react';
+import './Navbar.scss';
+import sunny from '../../images/Icons/wb_sunny-24px.svg';
+import dark from '../../images/Icons/nights_stay-24px.svg';
 
-import { Link } from "react-scroll";
-import { ThemeContext } from "../../context/ThemeContext";
+import { Link } from 'react-scroll';
+import { ThemeContext } from '../../context/ThemeContext';
 
 export const Navbar: React.FC = () => {
   const context = useContext(ThemeContext);
   const { theme, toggleTheme } = context;
 
-  const [show, setShow] = useState("hide");
+  const [show, setShow] = useState('hide');
   const [label, setLabel] = useState<boolean>(false);
 
   const closeNav = () => {
     setTimeout(() => {
-      setShow("hide");
+      setShow('hide');
     }, 7000);
   };
 
@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
       className={`navContainer navContainer--${show} navContainer--${theme}`}
     >
       <a
-        href={"https://github.com/27diego/Portfolio_typescript"}
+        href={'https://github.com/27diego/Portfolio_typescript'}
         rel="noopener noreferrer"
         target="_blank"
         className="project__github--wrapper--link"
@@ -54,7 +54,7 @@ export const Navbar: React.FC = () => {
             to="home-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--${theme}`}
           >
             Home
@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
             to="projects-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--${theme}`}
           >
             Projects
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
             to="skills-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--skills navbar__item--${theme}`}
           >
             Skills
@@ -81,7 +81,7 @@ export const Navbar: React.FC = () => {
             to="education-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--${theme}`}
           >
             Education
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
             to="about-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--${theme}`}
           >
             About Me
@@ -99,7 +99,7 @@ export const Navbar: React.FC = () => {
             to="contact-destination"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             className={`navbar__item navbar__item--${theme}`}
           >
             Contact
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
       </div>
       <button
         onClick={() => {
-          setShow(show === "show" ? "hide" : "show");
+          setShow(show === 'show' ? 'hide' : 'show');
           closeNav();
         }}
         className={`navbtn navbtn--${show} navbtn--${theme}`}
@@ -120,7 +120,7 @@ export const Navbar: React.FC = () => {
       >
         <img
           className={`img img--${theme}`}
-          src={theme === "dark" ? sunny : dark}
+          src={theme === 'dark' ? sunny : dark}
           alt="sun"
         />
       </button>

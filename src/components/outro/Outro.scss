@@ -1,10 +1,10 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .Container--Outro {
   height: 90vh;
   width: 100%;
   display: flex;
-  margin-top: 3rem;
+  padding-top: 3rem;
 
   &--dark {
     background-color: $dark-bg;
@@ -177,7 +177,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 100%;
       display: inline-block;
       border-bottom: 1px solid white;
@@ -195,7 +195,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 100%;
       display: inline-block;
       border-bottom: 1px solid white;

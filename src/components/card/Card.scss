@@ -1,10 +1,10 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .Card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 120%;
+  height: 45rem;
   width: 30rem;
   font-size: 2rem;
   transition: all 0.8s ease;
@@ -13,9 +13,7 @@
 
   //moves other cards to right
   &--active {
-    // width: 50rem;
     z-index: 100;
-    // transform: scale(1.05);
 
     &--right {
       transform: translateX(-27rem);

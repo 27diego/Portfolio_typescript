@@ -53,7 +53,7 @@ export const Skills: React.FC = () => {
   return (
     <div className={`Container--Skills Container--Skills--${theme}`}>
       <div className={`skills__header skills__header--${theme}`}>
-        Tools I Use...
+        Tools I have experience with...
       </div>
       <div className="container--skills">
         <div className="technologies">

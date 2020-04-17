@@ -16,13 +16,14 @@
   height: 25%;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 20% 1fr;
   justify-items: center;
 
   &__degree {
     font-size: 3rem;
     font-family: 'Work Sans';
     width: 10%;
+    justify-self: start;
 
     &--dark {
       color: $dark-white;
@@ -36,6 +37,16 @@
     height: 20rem;
     border-radius: 50%;
     grid-column: 2;
+  }
+  &__school {
+    font-size: 5rem;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    color: $dark-white;
+
+    grid-column: 3;
+    align-self: center;
+    justify-self: start;
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Navbar.scss';
 import sunny from '../../images/Icons/wb_sunny-24px.svg';
 import dark from '../../images/Icons/nights_stay-24px.svg';
@@ -10,8 +10,16 @@ export const Navbar: React.FC = () => {
   const context = useContext(ThemeContext);
   const { theme, toggleTheme } = context;
 
-  const [show, setShow] = useState('hide');
+  const [show, setShow] = useState('show');
   const [label, setLabel] = useState<boolean>(false);
+  const [hideToggle, sethideToggle] = useState<boolean>(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow('hide');
+      sethideToggle(false);
+    }, 5000);
+  }, []);
 
   const closeNav = () => {
     setTimeout(() => {
@@ -111,7 +119,9 @@ export const Navbar: React.FC = () => {
           setShow(show === 'show' ? 'hide' : 'show');
           closeNav();
         }}
-        className={`navbtn navbtn--${show} navbtn--${theme}`}
+        className={`navbtn navbtn--${
+          hideToggle ? 'initial' : 'noinitial'
+        } navbtn--${show} navbtn--${theme}`}
       ></button>
 
       <button

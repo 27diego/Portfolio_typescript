@@ -1,40 +1,40 @@
-import React, { useState, useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import "./Education.scss";
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
+import './Education.scss';
 
-import school from "../../images/brand logos/csumblogo.png";
-import { Course } from "./Course";
+import school from '../../images/brand logos/csumblogo.png';
+import { Course } from './Course';
 
-import networks from "../../images/Icons/wifi-24px.svg";
-import databases from "../../images/Icons/cloud-24px.svg";
-import algorithms from "../../images/Icons/category-24px.svg";
-import os from "../../images/Icons/developer_board-24px.svg";
+import networks from '../../images/Icons/wifi-24px.svg';
+import databases from '../../images/Icons/cloud-24px.svg';
+import algorithms from '../../images/Icons/category-24px.svg';
+import os from '../../images/Icons/developer_board-24px.svg';
 
 export const Education: React.FC = () => {
   const [courses] = useState([
     {
-      title: "OS",
+      title: 'OS',
       icon: os,
       description:
-        "Covered operating systems at a high and low level including hardware and design of an operating system. Learned the Linux command line, writing shell scripts, and work with GNU utilities such as awk, sed, and make. Also covered process management, memory management, file systems and concurrency",
+        'Covered operating systems at a high and low level including hardware and design of an operating system. Learned the Linux command line, writing shell scripts, and work with GNU utilities such as awk, sed, and make. Also covered process management, memory management, file systems and concurrency',
     },
     {
-      title: "Databases",
+      title: 'Databases',
       icon: databases,
       description:
-        "Studied database use and design with focus on relational databases and a touch on NoSQL. Focused on designing relational schemas, writting SQL queries, accessing DBs programmatically and performing database administration.",
+        'Studied database use and design with focus on relational databases and a touch on NoSQL. Focused on designing relational schemas, writting SQL queries, accessing DBs programmatically and performing database administration.',
     },
     {
-      title: "Algorithms",
+      title: 'Algorithms',
       icon: algorithms,
       description:
-        "Learned fundemental algorithm design techniques and important data structures to solve problems involving recursion, hashes, heaps, graphs, trees, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer etc. and applied them to solve problems from a Facebook engineer.",
+        'Learned fundemental algorithm design techniques and important data structures to solve problems involving recursion, hashes, heaps, graphs, trees, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer etc. and applied them to solve problems from a Facebook engineer.',
     },
     {
-      title: "Networks",
+      title: 'Networks',
       icon: networks,
       description:
-        "Learned about Networking ranging through Telecomm and Data Comm technology, internetworking protocols such as TCP and IP. Covered Local Area Network and Wide Area Network and the way the Internet works at a high and low level as well as emerging trends like voice other the network.",
+        'Learned about Networking ranging through Telecomm and Data Comm technology, internetworking protocols such as TCP and IP. Covered Local Area Network and Wide Area Network and the way the Internet works at a high and low level as well as emerging trends like voice other the network.',
     },
   ]);
 
@@ -50,6 +50,7 @@ export const Education: React.FC = () => {
           </span>
         </div>
         <img className="EdHeader__img" src={school} alt="csumb logo" />
+        <div className="EdHeader__school">@ CSUMB</div>
       </div>
       <div className="courses">
         {courses.map((item) => (

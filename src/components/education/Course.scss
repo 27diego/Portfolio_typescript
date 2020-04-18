@@ -10,6 +10,8 @@
     border-radius: 5px;
     padding: 2rem;
 
+    box-shadow: 2px 4px 17px -4px rgba(0, 0, 0, 0.1);
+
     &--dark {
       background-color: $dark-blue;
     }

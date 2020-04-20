@@ -19,6 +19,7 @@ import redis from '../../images/brand logos/Back end/redis.svg';
 import { SkillsModal } from '../../portals/skills-modal/SkillsModal';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { Overlay } from '../../portals/overlay/Overlay';
 
 export const Skills: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
@@ -428,6 +429,21 @@ export const Skills: React.FC = () => {
               skills={skills}
             />
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {modal === true ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Overlay />
+          </motion.div>
+        ) : (
+          ''
         )}
       </AnimatePresence>
     </div>

@@ -23,7 +23,7 @@
 */
 @mixin respond($breakpoint) {
   @if $breakpoint == phonex {
-    @media (max-width: 24.43em) {
+    @media (max-width: 25.93em) {
       @content;
     }
   }

@@ -1,12 +1,3 @@
-//Media query manager
-/*
-0-600px: phone
-600 - 900px: Tabled portrait
-900 - 1200px: Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + : Big desktop
-*/
-
 //an example
 @mixin respond-phone {
   @media (max-width: 600px) {
@@ -14,7 +5,15 @@
   }
 }
 
-/* $breakpoint argument choices: 
+//Media query manager
+/*
+0-600px: phone
+600 - 900px: Tabled portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+ $breakpoint argument choices: 
     - phone
     - tablet-port
     - tablet-land
@@ -23,6 +22,12 @@
     1em = 16px
 */
 @mixin respond($breakpoint) {
+  @if $breakpoint == phonex {
+    @media (max-width: 24.43em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;

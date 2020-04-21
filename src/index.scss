@@ -19,6 +19,18 @@ html {
   padding: 0;
   font-size: 10px;
 
+  @include respond(big-desktop) {
+    font-size: 14px;
+  }
+
+  @include respond(tab-land) {
+    font-size: 8px;
+  }
+
+  @include respond(tab-port) {
+    font-size: 7px;
+  }
+
   @include respond(phone) {
     font-size: 5px;
   }

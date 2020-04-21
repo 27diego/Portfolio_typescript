@@ -7,9 +7,7 @@
   z-index: 1000;
   width: 100%;
   height: auto;
-
   padding-top: 3rem;
-
   transition: all 0.5s;
 
   &--dark {
@@ -30,12 +28,24 @@
 
   .project__github--wrapper--link {
     position: absolute;
-    width: 11%;
+    width: 13rem;
     left: 5rem;
     top: 3.5rem;
 
     @include respond(phone) {
-      left: 1rem;
+      visibility: hidden;
+    }
+
+    @include respond(phonex) {
+      visibility: hidden;
+    }
+    @include respond(tab-land) {
+      left: 2rem;
+      width: 13rem;
+    }
+    @include respond(tab-port) {
+      left: -1.5rem;
+      width: 13rem;
     }
   }
 
@@ -57,11 +67,19 @@
 
     border: solid #fff 1px;
 
+    @include respond(tab-land) {
+      left: 6rem;
+    }
+
+    @include respond(tab-port) {
+      left: 2rem;
+    }
+
     &:after {
       content: "";
       position: absolute;
       top: 0;
-      left: 50%;
+      left: 8.3rem;
       width: 0;
       height: 0;
       border: 5px solid transparent;
@@ -69,6 +87,13 @@
       border-top: 0;
       margin-left: 2px;
       margin-top: -5px;
+
+      @include respond(tab-land) {
+        left: 6rem;
+      }
+      @include respond(tab-port) {
+        left: 5rem;
+      }
     }
     p {
       font-size: 1.2rem;
@@ -83,8 +108,26 @@
   padding: 2.5rem;
   border-radius: 2rem;
 
+  @include respond(big-desktop) {
+    width: 72%;
+  }
+
+  @include respond(tab-land) {
+    width: 73%;
+  }
+
+  @include respond(tab-port) {
+    width: 73%;
+  }
+
   @include respond(phone) {
-    width: 70%;
+    width: 80%;
+    transform: translateX(-4rem);
+  }
+
+  @include respond(phonex) {
+    width: 90%;
+    transform: translateX(0);
   }
 
   &--dark {
@@ -124,6 +167,13 @@
     font-size: 1.6rem;
     @include respond(phone) {
       font-size: 1.9rem;
+    }
+    @include respond(phonex) {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
     }
 
     &--light {
@@ -239,6 +289,21 @@
     right: 5rem;
     width: 7rem;
     height: 7rem;
+  }
+
+  @include respond(phonex) {
+    right: 3rem;
+    top: 16.5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+
+  @include respond(tab-land) {
+    right: 8rem;
+  }
+
+  @include respond(tab-port) {
+    right: 4rem;
   }
 
   &--light {

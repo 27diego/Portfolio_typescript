@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
-import './Intro.scss';
-import logo from '../../images/brand logos/IMG_0855.png';
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+import "./Intro.scss";
+import logo from "../../images/brand logos/IMG_0855.png";
 
 export const Intro = () => {
   const context = useContext(ThemeContext);
@@ -10,7 +10,7 @@ export const Intro = () => {
   const [active, setActive] = useState<boolean>(true);
 
   setTimeout(() => {
-    setActive(false);
+    setActive(true);
   }, 3000);
 
   return (
@@ -26,7 +26,7 @@ export const Intro = () => {
         </a>
         <div
           className={`intro__label intro__label--${
-            active ? 'active' : 'deactive'
+            active ? "active" : "deactive"
           }`}
         >
           <span>Click for my Resume!</span>

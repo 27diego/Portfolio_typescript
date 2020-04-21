@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setShow("show");
+      setShow("hide");
       sethideToggle(false);
     }, 5000);
   }, []);

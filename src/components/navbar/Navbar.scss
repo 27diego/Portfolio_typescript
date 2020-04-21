@@ -33,6 +33,10 @@
     width: 11%;
     left: 5rem;
     top: 3.5rem;
+
+    @include respond(phone) {
+      left: 1rem;
+    }
   }
 
   .githubLabel {
@@ -80,7 +84,7 @@
   border-radius: 2rem;
 
   @include respond(phone) {
-    width: 50%;
+    width: 70%;
   }
 
   &--dark {
@@ -118,6 +122,9 @@
 
   &__item {
     font-size: 1.6rem;
+    @include respond(phone) {
+      font-size: 1.9rem;
+    }
 
     &--light {
       color: $light-black;
@@ -184,6 +191,9 @@
       animation-fill-mode: forwards;
       animation-duration: 0.8s;
       margin-left: auto;
+      @include respond(phone) {
+        margin-top: -0.2rem;
+      }
     }
   }
 
@@ -225,6 +235,12 @@
   display: block;
   border: 1px solid $dark-white;
 
+  @include respond(phone) {
+    right: 5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+
   &--light {
     background-color: $dark-red;
   }
@@ -232,6 +248,10 @@
   .img {
     width: 100%;
     margin-top: 0.4rem;
+
+    @include respond(phone) {
+      margin-top: 0.7rem;
+    }
 
     &--light {
       margin-left: 0.4rem;

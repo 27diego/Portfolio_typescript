@@ -24,6 +24,8 @@ export const Card: React.FC<CardProps> = ({
     setShow(false);
   };
 
+  //we need to get the responsive cases
+  //container getBoundingClientRect
   useEffect(() => {
     if (myRef.current!.getBoundingClientRect().x > 600) {
       setRight("right");
@@ -79,7 +81,13 @@ export const Card: React.FC<CardProps> = ({
             expand ? "active" : "unactive"
           } Card__content--${theme} Card__content--back`}
         >
-          <img className="Card__logo" src={logo} alt="brush" />
+          <img
+            className={`Card__logo Card__logo--${
+              header.toLocaleLowerCase() === "problem solve" ? "problem" : ""
+            }`}
+            src={logo}
+            alt="brush"
+          />
           <h2 className="Card__content__header">{header}</h2>
           <p className="Card__content__info">{paragraph}</p>
         </div>

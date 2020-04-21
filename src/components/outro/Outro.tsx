@@ -11,7 +11,7 @@ export const Outro: React.FC = () => {
     name: "",
     subject: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const context = useContext(ThemeContext);
@@ -46,7 +46,7 @@ export const Outro: React.FC = () => {
           </div>
           <input
             value={form.name}
-            onChange={e => change("name", e.target.value)}
+            onChange={(e) => change("name", e.target.value)}
             className={`form__name form__input form__input--${theme}`}
             placeholder="Name"
             type="text"
@@ -54,7 +54,7 @@ export const Outro: React.FC = () => {
           />
           <input
             value={form.subject}
-            onChange={e => change("subject", e.target.value)}
+            onChange={(e) => change("subject", e.target.value)}
             className={`form__subject form__input form__input--${theme}`}
             placeholder="Subject"
             type="text"
@@ -62,7 +62,7 @@ export const Outro: React.FC = () => {
           />
           <input
             value={form.email}
-            onChange={e => change("email", e.target.value)}
+            onChange={(e) => change("email", e.target.value)}
             className={`form__email form__input form__input--${theme}`}
             placeholder="Email"
             type="email"
@@ -70,7 +70,7 @@ export const Outro: React.FC = () => {
           />
           <textarea
             value={form.message}
-            onChange={e => change("message", e.target.value)}
+            onChange={(e) => change("message", e.target.value)}
             className={`form__message form__input form__input--${theme}`}
             placeholder="Message"
             required
@@ -78,8 +78,7 @@ export const Outro: React.FC = () => {
 
           <div className={`form__outro form__outro--${theme}`}>
             I am interested in freelancing opportunities and would love to help
-            you on your next project! Send me a message and we’ll go from there
-            ….
+            you on your next project! Send me a message and we’ll go from there.
           </div>
 
           <button className="btn--Oform">OK!</button>

@@ -1,9 +1,9 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .Card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative;
   height: 45rem;
   width: 30rem;
   font-size: 2rem;
@@ -68,6 +68,10 @@
     &--problem {
       transform: rotate(180deg);
     }
+
+    @include respond(phone) {
+      height: 11rem;
+    }
   }
 
   &__content {
@@ -80,6 +84,12 @@
     position: relative;
     z-index: 5;
     transition: all 0.5s;
+
+    &__header {
+      @include respond(phone) {
+        font-size: 3.5rem;
+      }
+    }
 
     //expands front card forward
     &--active {
@@ -125,7 +135,7 @@
   top: 0;
   right: 0;
   z-index: 1;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 
   overflow: scroll;
 

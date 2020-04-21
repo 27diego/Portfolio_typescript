@@ -1,10 +1,16 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .intro {
   margin-top: -27rem;
   padding: 15rem 7rem 0 7rem;
   height: 100vh;
   position: relative;
   z-index: 100;
+
+  @include respond(phone) {
+    height: 55vh;
+  }
 
   .resumeContainer {
     position: relative;
@@ -23,7 +29,7 @@
 
     transition: opacity 0.3s;
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 50%;
@@ -72,6 +78,11 @@
     transform: rotate(330deg) translateY(-30rem) translateX(-30rem);
     animation: show 1s forwards;
     width: 60%;
+
+    @include respond(phone) {
+      width: 70%;
+    }
+
     &__header {
       margin: 0;
       font-weight: bold;
@@ -114,6 +125,10 @@
 
     &__text {
       font-size: 1.6rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
 
     &__icon {
@@ -122,17 +137,21 @@
       &--light {
         &::before,
         &::after {
-          content: '';
+          content: "";
           display: block;
           width: 45%;
           border-bottom: 1px solid $light-black;
+
+          @include respond(phone) {
+            width: 500%;
+          }
         }
       }
 
       &--dark {
         &::before,
         &::after {
-          content: '';
+          content: "";
           display: block;
           width: 45%;
           border-bottom: 1px solid $dark-white;
@@ -142,10 +161,16 @@
       &::before {
         transform: rotate(30deg) translateX(0.1rem) translateY(-1.2rem);
         margin-right: auto;
+        @include respond(phone) {
+          transform: rotate(30deg) translateX(0.3rem) translateY(-1.2rem);
+        }
       }
       &::after {
         transform: rotate(330deg) translateX(-0.1rem) translateY(-1.35rem);
         margin-left: auto;
+        @include respond(phone) {
+          transform: rotate(330deg) translateX(-0.2rem) translateY(-1.35rem);
+        }
       }
     }
   }
@@ -155,6 +180,12 @@
   &__container--map {
     transition: all 0.5s;
     transform: translateY(0.5rem);
+
+    @include respond(phone) {
+      width: 5rem;
+      transform: translateY(2.5rem);
+      margin-left: 0.7rem;
+    }
 
     &:hover {
       transform: translateY(-0.5rem);

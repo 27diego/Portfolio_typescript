@@ -1,12 +1,11 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .container--Card {
   height: 85vh;
   padding: 1rem 5rem 3rem 5rem;
-
   display: grid;
   grid-template-rows: 20% 80%;
-
   position: relative;
 
   &--light {
@@ -14,6 +13,10 @@
   }
   &--dark {
     background-color: $dark-bg;
+  }
+
+  @include respond(phone) {
+    height: 50vh;
   }
 }
 
@@ -30,6 +33,10 @@
     &--dark {
       color: $dark-white;
     }
+
+    @include respond(phone) {
+      margin-left: -7rem;
+    }
   }
 
   &__container {
@@ -39,6 +46,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+
+    @include respond(phone) {
+      grid-gap: 3rem;
+    }
   }
 }
 

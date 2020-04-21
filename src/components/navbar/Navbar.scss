@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .navContainer {
   position: sticky;
@@ -53,7 +54,7 @@
     border: solid #fff 1px;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 50%;
@@ -78,6 +79,10 @@
   padding: 2.5rem;
   border-radius: 2rem;
 
+  @include respond(phone) {
+    width: 50%;
+  }
+
   &--dark {
     background-color: $dark-black;
     border: 1px solid $dark-grey-border;
@@ -89,7 +94,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     border-bottom: 1px solid #707070;
     display: block;
     width: 100%;
@@ -150,7 +155,7 @@
     &::before,
     &::after {
       width: 66.97%;
-      content: '';
+      content: "";
       display: block;
       border-bottom: 1px solid $dark-white;
     }
@@ -161,7 +166,7 @@
     &::before,
     &::after {
       width: 66.97%;
-      content: '';
+      content: "";
       display: block;
       border-bottom: 1px solid #1f1a1b;
     }

@@ -1,29 +1,29 @@
-import React, { useState, useContext, useEffect } from 'react';
-import './Navbar.scss';
-import sunny from '../../images/Icons/wb_sunny-24px.svg';
-import dark from '../../images/Icons/nights_stay-24px.svg';
+import React, { useState, useContext, useEffect } from "react";
+import "./Navbar.scss";
+import sunny from "../../images/Icons/wb_sunny-24px.svg";
+import dark from "../../images/Icons/nights_stay-24px.svg";
 
-import { Link } from 'react-scroll';
-import { ThemeContext } from '../../context/ThemeContext';
+import { Link } from "react-scroll";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Navbar: React.FC = () => {
   const context = useContext(ThemeContext);
   const { theme, toggleTheme } = context;
 
-  const [show, setShow] = useState('show');
+  const [show, setShow] = useState("show");
   const [label, setLabel] = useState<boolean>(false);
   const [hideToggle, sethideToggle] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setShow('hide');
+      setShow("show");
       sethideToggle(false);
     }, 5000);
   }, []);
 
   const closeNav = () => {
     setTimeout(() => {
-      setShow('hide');
+      setShow("hide");
     }, 7000);
   };
 
@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
       className={`navContainer navContainer--${show} navContainer--${theme}`}
     >
       <a
-        href={'https://github.com/27diego/Portfolio_typescript'}
+        href={"https://github.com/27diego/Portfolio_typescript"}
         rel="noopener noreferrer"
         target="_blank"
         className="project__github--wrapper--link"
@@ -116,11 +116,11 @@ export const Navbar: React.FC = () => {
       </div>
       <button
         onClick={() => {
-          setShow(show === 'show' ? 'hide' : 'show');
+          setShow(show === "show" ? "hide" : "show");
           closeNav();
         }}
         className={`navbtn navbtn--${
-          hideToggle ? 'initial' : 'noinitial'
+          hideToggle ? "initial" : "noinitial"
         } navbtn--${show} navbtn--${theme}`}
       ></button>
 
@@ -130,7 +130,7 @@ export const Navbar: React.FC = () => {
       >
         <img
           className={`img img--${theme}`}
-          src={theme === 'dark' ? sunny : dark}
+          src={theme === "dark" ? sunny : dark}
           alt="sun"
         />
       </button>

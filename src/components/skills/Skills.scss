@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .Container--Skills {
   position: relative;
@@ -126,6 +127,14 @@
         fill: $postgress-logo;
       }
     }
+    &--lock {
+      &--active {
+        fill: green;
+      }
+      &:hover {
+        fill: green;
+      }
+    }
   }
 }
 
@@ -136,6 +145,13 @@
   display: grid;
   grid-template-columns: 1fr 5% 1fr;
 
+  @include respond(tab-port) {
+    margin-top: 4rem;
+  }
+  @include respond(phone) {
+    margin-top: 0rem;
+  }
+
   .technologies {
     padding: 1rem;
     display: grid;
@@ -143,9 +159,23 @@
     justify-items: center;
     align-items: center;
 
+    @include respond(tab-port) {
+      grid-row-gap: 1rem;
+    }
+    @include respond(phone) {
+      grid-row-gap: 0;
+    }
+
     &__header {
       grid-column: 1/-1;
       font-size: 1.5rem;
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
 
       &--light {
         color: $dark-black;
@@ -153,6 +183,11 @@
       &--dark {
         color: $dark-white;
       }
+    }
+
+    &--front {
+    }
+    &--back {
     }
   }
 
@@ -181,6 +216,15 @@
   justify-content: center;
   align-items: center;
 
+  @include respond(tab-port) {
+    height: 15rem;
+    width: 17rem;
+  }
+  @include respond(phone) {
+    height: 20rem;
+    width: 22rem;
+  }
+
   &__label {
     font-size: 1.5rem;
     margin-top: 0.5rem;
@@ -206,9 +250,5 @@
   }
   &--dark {
     background-color: $dark-black;
-  }
-
-  &--middle {
-    grid-column: 1/-1;
   }
 }

@@ -14,9 +14,17 @@
   &--dark {
     background-color: $dark-bg;
   }
+  @include respond(tab-land) {
+    height: 70vh;
+    overflow: hidden;
+  }
+  @include respond(tab-port) {
+    height: 60vh;
+    overflow: hidden;
+  }
 
   @include respond(phone) {
-    height: 50vh;
+    height: 53vh;
   }
 }
 
@@ -47,8 +55,17 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 
+    @include respond(tab-port) {
+      grid-gap: 9rem;
+      margin-left: 1rem;
+    }
     @include respond(phone) {
-      grid-gap: 3rem;
+      grid-gap: 7rem;
+      margin-left: 1rem;
+    }
+    @include respond(phonex) {
+      grid-gap: 7rem;
+      margin-left: 2.4rem;
     }
   }
 }

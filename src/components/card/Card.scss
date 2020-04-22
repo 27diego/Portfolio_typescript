@@ -17,6 +17,9 @@
 
     &--right {
       transform: translateX(-27rem);
+      @include respond(tab-land) {
+        transform: translateX(-28rem);
+      }
     }
   }
 
@@ -32,6 +35,21 @@
     padding: 1rem;
     backface-visibility: hidden;
     z-index: 7;
+
+    @include respond(tab-land) {
+      width: 32rem;
+    }
+    @include respond(tab-port) {
+      width: 93%;
+    }
+    @include respond(phone) {
+      width: 90%;
+      height: 110%;
+    }
+    @include respond(phonex) {
+      width: 80%;
+      height: 110%;
+    }
 
     //moves back to side
     &--active {
@@ -85,6 +103,20 @@
     z-index: 5;
     transition: all 0.5s;
 
+    @include respond(tab-land) {
+      width: 30rem;
+    }
+    @include respond(tab-port) {
+      width: 26rem;
+    }
+
+    @include respond(phone) {
+      width: 25rem;
+    }
+    @include respond(phonex) {
+      width: 23rem;
+    }
+
     &__header {
       @include respond(phone) {
         font-size: 3.5rem;
@@ -96,6 +128,9 @@
       width: 28rem;
       z-index: 10;
       transform: scale(1.1) translateX(-2rem);
+      @include respond(tab-land) {
+        width: 30rem;
+      }
     }
 
     &--light {

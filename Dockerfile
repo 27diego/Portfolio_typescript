@@ -11,6 +11,6 @@ RUN npm install
 ADD src /usr/src/app/src
 ADD public /usr/src/app/public
 
-RUN npm run build
+RUN npm build
 
-CMD [ "serve", "-s", "build" ]
+CMD [ "npm", "start" ]

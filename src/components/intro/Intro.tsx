@@ -10,7 +10,7 @@ export const Intro = () => {
   const [active, setActive] = useState<boolean>(true);
 
   setTimeout(() => {
-    setActive(true);
+    setActive(false);
   }, 3000);
 
   return (

@@ -3,6 +3,7 @@ type CardProps = {
   header: string;
   paragraph: string;
   longParagraph: string;
+  containerSize: number;
   hiddenDes: {
     title1: string;
     paragraph1: string;

@@ -9,6 +9,7 @@ export const Card: React.FC<CardProps> = ({
   paragraph,
   longParagraph,
   hiddenDes,
+  containerSize,
 }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
@@ -23,6 +24,8 @@ export const Card: React.FC<CardProps> = ({
     setExpand(false);
     setShow(false);
   };
+
+  console.log(containerSize);
 
   //we need to get the responsive cases
   //container getBoundingClientRect
@@ -56,12 +59,14 @@ export const Card: React.FC<CardProps> = ({
       </div>
       <div
         onClick={() => {
-          setExpand(!expand);
-          show
-            ? setShow(false)
-            : setTimeout(() => {
-                setShow(true);
-              }, 750);
+          if (containerSize > 900) {
+            setExpand(!expand);
+            show
+              ? setShow(false)
+              : setTimeout(() => {
+                  setShow(true);
+                }, 750);
+          }
         }}
         className={`Card__side Card__side--${
           expand ? "active" : "unactive"

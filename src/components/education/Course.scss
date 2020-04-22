@@ -47,10 +47,10 @@
         font-size: 1.4rem;
       }
       @include respond(phone) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       @include respond(phonex) {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
       }
 
       &--light {

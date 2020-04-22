@@ -224,9 +224,22 @@
       border-bottom: 1px solid white;
     }
     &::after {
-      transform: translateX(-100%) translateY(-2200%);
+      transform: translateX(-100%) translateY(-2300%);
+
+      @include respond(big-desktop) {
+        transform: translateX(-100%) translateY(-3800%);
+      }
+      @include respond(tab-land) {
+        transform: translateX(-100%) translateY(-1800%);
+      }
+      @include respond(tab-port) {
+        transform: translateX(-100%) translateY(-1400%);
+      }
       @include respond(phone) {
-        transform: translateX(-100%) translateY(-2000%);
+        transform: translateX(-100%) translateY(-1400%);
+      }
+      @include respond(phonex) {
+        transform: translateX(-100%) translateY(-2150%);
       }
     }
 
@@ -245,15 +258,30 @@
       border-bottom: 1px solid white;
     }
     &::after {
-      transform: translateX(-100%) translateY(-2200%);
+      transform: translateX(-100%) translateY(-2380%);
 
+      @include respond(big-desktop) {
+        transform: translateX(-100%) translateY(-3800%);
+      }
+      @include respond(tab-land) {
+        transform: translateX(-100%) translateY(-1800%);
+      }
+      @include respond(tab-port) {
+        transform: translateX(-100%) translateY(-1400%);
+      }
       @include respond(phone) {
-        transform: translateX(-100%) translateY(-2000%);
+        transform: translateX(-100%) translateY(-1400%);
+      }
+      @include respond(phonex) {
+        transform: translateX(-110%) translateY(-2150%);
       }
     }
 
     &::before {
       transform: translateX(100%) translateY(1000%);
+      @include respond(phonex) {
+        transform: translateX(110%) translateY(1000%);
+      }
     }
   }
 

@@ -12,8 +12,14 @@
     background-color: $light-bg;
   }
 
+  @include respond(tab-port) {
+    height: 70vh;
+  }
   @include respond(phone) {
-    height: 50vh;
+    height: 70vh;
+  }
+  @include respond(phonex) {
+    height: 70vh;
   }
 }
 
@@ -54,6 +60,9 @@
     justify-self: start;
 
     @include respond(phone) {
+      margin-left: 5rem;
+    }
+    @include respond(phonex) {
       margin-left: 3rem;
     }
   }
@@ -70,7 +79,7 @@
 .wrapper--text {
   width: 70%;
   grid-column: 1/2;
-  @include respond(phone) {
+  @include respond(phonex) {
     align-self: center;
   }
 }

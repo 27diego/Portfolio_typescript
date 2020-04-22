@@ -78,8 +78,8 @@ export const Skills: React.FC = () => {
                 setModal(true);
                 changeModal("react", react, {
                   one: "Context",
-                  two: "Hooks",
-                  three: "Server-Side",
+                  two: "Server-Side",
+                  three: "Hooks",
                 });
               }}
               onMouseEnter={(): void => setLabel("react")}

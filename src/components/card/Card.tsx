@@ -25,8 +25,6 @@ export const Card: React.FC<CardProps> = ({
     setShow(false);
   };
 
-  console.log(containerSize);
-
   //we need to get the responsive cases
   //container getBoundingClientRect
   useEffect(() => {

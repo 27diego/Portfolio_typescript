@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import "./Intro.scss";
 import logo from "../../images/brand logos/IMG_0855.png";
@@ -7,11 +7,29 @@ export const Intro = () => {
   const context = useContext(ThemeContext);
   const { theme } = context;
 
+  const indicator = useRef<HTMLDivElement>(null);
+
   const [active, setActive] = useState<boolean>(true);
+  const [indicatorPos, setIndicatorPos] = useState<string>("inScreen");
 
   setTimeout(() => {
     setActive(false);
   }, 3000);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onWindowScroll);
+    return () => {
+      window.removeEventListener("scroll", onWindowScroll);
+    };
+  }, []);
+
+  const onWindowScroll = () => {
+    if (indicator.current!.getBoundingClientRect().top < 147) {
+      setIndicatorPos("outScreen");
+    } else {
+      setIndicatorPos("inScreen");
+    }
+  };
 
   return (
     <div className={`intro intro--${theme}`}>
@@ -61,7 +79,10 @@ export const Intro = () => {
         </div>
       </div>
 
-      <div className={`indicator indicator--${theme}`}>
+      <div
+        ref={indicator}
+        className={`indicator indicator--${indicatorPos} indicator--${theme}`}
+      >
         <p className="indicator__text">Swipe Down</p>
         <div className={`indicator__icon indicator__icon--${theme}`}></div>
       </div>

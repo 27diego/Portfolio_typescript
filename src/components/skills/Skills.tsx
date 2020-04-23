@@ -189,7 +189,7 @@ export const Skills: React.FC = () => {
                 setModal(true);
                 changeModal("js", js, {
                   one: "ES7+",
-                  two: "",
+                  two: "Babel",
                   three: "TypeScript",
                 });
               }}

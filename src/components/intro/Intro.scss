@@ -167,6 +167,7 @@
     transform: translateX(-50%);
     z-index: 100;
     animation: bounce 3s infinite;
+    transition: opacity 0.7s;
 
     @include respond(big-desktop) {
       left: 46.6%;
@@ -176,6 +177,13 @@
     }
     @include respond(phone) {
       left: 43.2%;
+    }
+
+    &--outScreen {
+      opacity: 0;
+    }
+    &--inScreen {
+      opacity: 1;
     }
 
     &--dark {

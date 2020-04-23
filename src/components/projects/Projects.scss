@@ -1,4 +1,6 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
+
 .Container--Projects {
   &--light {
     background-color: $light-bg;
@@ -23,4 +25,11 @@
   align-items: center;
   margin: 0;
   padding: 0;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  @include respond(phonex) {
+    flex-direction: column;
+  }
 }

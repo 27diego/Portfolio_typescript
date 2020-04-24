@@ -13,6 +13,8 @@ export const Pannel: React.FC<Projects> = ({
 }) => {
   const [expand, setExpand] = useState<boolean>(false);
 
+  //we're going to change the layout of the pannels
+
   return (
     <div
       key={`project project--${title.replace(/\s/g, "").toLocaleLowerCase()}`}

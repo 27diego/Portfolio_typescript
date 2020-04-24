@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
       title: "Smart Brain",
       logo: brain,
       options: {
-        width: "8rem",
+        width: "",
       },
       icons: [react, js, css, node, postgresql, redis],
       landing: smartbrain,
@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Monterey Mushrooms",
-      logo: MMLogo,
+      logo: "",
       landing: sopIndex,
       icons: [react, redux, typescript, scss, node, mongo, docker],
       link: "https://github.com/27diego/MM-index",

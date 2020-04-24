@@ -30,16 +30,6 @@ export const Pannel: React.FC<Projects> = ({
         {title}
       </div>
       <div className="content">
-        {logo !== "" && (
-          <figure className="project__logo--wrapper">
-            <img
-              src={logo}
-              style={options}
-              className="project__logo"
-              alt="company logo"
-            />
-          </figure>
-        )}
         <div className="container--icons">
           {icons.map((icon) => (
             <img

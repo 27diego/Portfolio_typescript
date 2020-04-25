@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import { Intro } from "./components/intro/Intro";
 import { Love } from "./components/love/Love";
@@ -12,7 +12,26 @@ import { Element } from "react-scroll";
 import { ThemeContextProvider } from "./context/ThemeContext";
 
 const App = () => {
-  const [main, setMain] = useState<boolean>(false);
+  const [main, setMain] = useState<boolean>(true);
+
+  useEffect(() => {
+    let state = true;
+    if (window.sessionStorage.getItem("stateOfApp") !== null) {
+      if (window.sessionStorage.getItem("stateOfApp") === "true") {
+        state = true;
+      } else {
+        state = false;
+      }
+    } else {
+      state = true;
+    }
+
+    setMain(state);
+  }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem("stateOfApp", main.toString());
+  }, [main]);
 
   return (
     <ThemeContextProvider>

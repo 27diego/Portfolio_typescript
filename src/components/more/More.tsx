@@ -1,17 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./More.scss";
+
+import whyImg from "../../images/images for grid/whycoding.jpeg";
 
 import portrait from "../../images/me.jpg";
 
 export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
   const [activate, setActivate] = useState<boolean>(false);
   const [backArrow, setBackArrow] = useState<string>("");
+  const [why, setWhy] = useState<boolean>(false);
+
+  const codeRef: any = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
       setActivate(true);
     }, 1500);
   }, [activate]);
+
+  const onScroll = () => {
+    console.log(codeRef.current!.getBoundingClientRect().top);
+    if (codeRef.current!.getBoundingClientRect().top < 170) {
+      setWhy(true);
+      console.log("middle");
+    }
+  };
 
   return (
     <div className="Container--More">
@@ -69,6 +90,32 @@ export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
       <div className={`about about--${activate ? "show" : "hide"}`}>
         <div className="about__main">About Me</div>
       </div>
+
+      <section className="section section--why">
+        <img
+          ref={codeRef}
+          src={whyImg}
+          alt="coding"
+          className={`section__img section__img--left--${
+            why ? "load" : "initial"
+          }`}
+        />
+        <div className={`info info--left info--${why ? "load" : "initial"}`}>
+          <div className="info__header">
+            <span>The reason I choose</span>
+          </div>
+          <p className="info__body ">
+            to dedicate myself to this is because I enjoy web development and I
+            enjoy creating. I look at a blank screen like as if it is a drawing
+            board where I can come up with something and make it turn to life.
+            It gives me that same artistic feeling of playing the guitar. It is
+            something that I can say I love to do.
+          </p>
+        </div>
+      </section>
+      <section className="section section--background"></section>
+      <section className="section section--hobby"></section>
+      <section className="section section--future"></section>
     </div>
   );
 };

@@ -1,73 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./More.scss";
 
-import niners from "../../images/images for grid/niners.png";
-import lakers from "../../images/images for grid/lakers.jpg";
-import mexico from "../../images/images for grid/mexico.jpg";
-import gym from "../../images/images for grid/gym.jpg";
-import nature from "../../images/images for grid/nature.jpg";
-import starwars from "../../images/images for grid/starwars.png";
-import guitar from "../../images/images for grid/guitar.png";
-import sky from "../../images/images for grid/sky.jpg";
-import manU from "../../images/images for grid/manU.jpg";
-import boxing from "../../images/images for grid/boxing.jpg";
+import portrait from "../../images/me.jpg";
 
-export const More = () => {
-  const [expand, setExpand] = useState(false);
+export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
+  const [activate, setActivate] = useState<boolean>(false);
+  const [backArrow, setBackArrow] = useState<string>("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setActivate(true);
+    }, 1500);
+  }, [activate]);
 
   return (
     <div className="Container--More">
-      <div className="gallery">
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--niners`}
+      <div className={`home home--${activate ? "show" : "hide"}`}>
+        <div
+          className="homeArrow__container"
+          onMouseOver={(): void => setBackArrow("back")}
+          onMouseOut={(): void => setBackArrow("")}
+          onClick={(): void => setMain(true)}
         >
-          <img src={niners} className="gallery__img" alt="niners" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--mexico`}
-        >
-          <img src={mexico} className="gallery__img" alt="mexico" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--gym`}
-        >
-          <img className="gallery__img" src={gym} alt="gym" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--nature`}
-        >
-          <img className="gallery__img" src={nature} alt="nature" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--starwars`}
-        >
-          <img className="gallery__img" src={starwars} alt="starwars" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--guitar`}
-        >
-          <img className="gallery__img" src={guitar} alt="guitar" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--lakers`}
-        >
-          <img className="gallery__img" src={lakers} alt="lakers" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--sky`}
-        >
-          <img className="gallery__img" src={sky} alt="sky" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--manU`}
-        >
-          <img className="gallery__img" src={manU} alt="Man U" />
-        </figure>
-        <figure
-          className={`gallery__item gallery__item--${expand} gallery__item--boxing`}
-        >
-          <img className="gallery__img" src={boxing} alt="boxing" />
-        </figure>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className={`homeArrow homeArrow--${backArrow}`}
+          >
+            <polyline
+              points="244 400 100 256 244 112"
+              style={{
+                fill: "none",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "48px",
+              }}
+            />
+            <line
+              x1="120"
+              y1="256"
+              x2="412"
+              y2="256"
+              style={{
+                fill: "none",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "48px",
+              }}
+            />
+          </svg>
+        </div>
+        <div className="home__title">Home</div>
+      </div>
+      <div
+        className={`name__container name__container--${
+          activate ? "load" : "initial"
+        }`}
+      >
+        <h1 className="name">Diego Vega</h1>
+      </div>
+
+      <img
+        className={`portrait portrait--${activate ? "show" : "hide"}`}
+        src={portrait}
+        alt="self portrait"
+      />
+
+      <div className={`about about--${activate ? "show" : "hide"}`}>
+        <div className="about__main">About Me</div>
       </div>
     </div>
   );

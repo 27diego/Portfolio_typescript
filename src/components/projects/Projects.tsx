@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Projects.scss";
 
-import MMLogo from "../../images/MMlogo.png";
+// import MMLogo from "../../images/MMlogo.png";
 import sopIndex from "../../images/sopIndex.png";
 
 import smartbrain from "../../images/smart-brain.png";

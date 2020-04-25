@@ -6,7 +6,7 @@ import dark from "../../images/Icons/nights_stay-24px.svg";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../../context/ThemeContext";
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
   const context = useContext(ThemeContext);
   const { theme, toggleTheme } = context;
 
@@ -59,6 +59,9 @@ export const Navbar: React.FC = () => {
       <div className={`nav nav--${theme}`}>
         <ul className="navbar">
           <Link
+            onClick={(): void =>
+              main === false ? setMain(true) : setMain(main)
+            }
             to="home-destination"
             spy={true}
             smooth={true}
@@ -68,6 +71,9 @@ export const Navbar: React.FC = () => {
             Home
           </Link>
           <Link
+            onClick={(): void =>
+              main === false ? setMain(true) : setMain(main)
+            }
             to="projects-destination"
             spy={true}
             smooth={true}
@@ -77,6 +83,9 @@ export const Navbar: React.FC = () => {
             Projects
           </Link>
           <Link
+            onClick={(): void =>
+              main === false ? setMain(true) : setMain(main)
+            }
             to="skills-destination"
             spy={true}
             smooth={true}
@@ -86,6 +95,9 @@ export const Navbar: React.FC = () => {
             Skills
           </Link>
           <Link
+            onClick={(): void =>
+              main === false ? setMain(true) : setMain(main)
+            }
             to="education-destination"
             spy={true}
             smooth={true}
@@ -95,15 +107,9 @@ export const Navbar: React.FC = () => {
             Education
           </Link>
           <Link
-            to="about-destination"
-            spy={true}
-            smooth={true}
-            duration={1000}
-            className={`navbar__item navbar__item--${theme}`}
-          >
-            About Me
-          </Link>
-          <Link
+            onClick={(): void =>
+              main === false ? setMain(true) : setMain(main)
+            }
             to="contact-destination"
             spy={true}
             smooth={true}
@@ -111,6 +117,16 @@ export const Navbar: React.FC = () => {
             className={`navbar__item navbar__item--${theme}`}
           >
             Contact
+          </Link>
+          <Link
+            onClick={(): void => setMain(false)}
+            to="about-destination"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            className={`navbar__item navbar__item--${theme}`}
+          >
+            About Me
           </Link>
         </ul>
       </div>

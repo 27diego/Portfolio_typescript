@@ -33,8 +33,10 @@
       @content;
     }
   }
+
+  //  768px 1024px
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media (max-width: 56.25em) and (max-height: 64em) {
       @content;
     }
   }

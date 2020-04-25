@@ -49,7 +49,7 @@ export const Pannel: React.FC<Projects> = ({
           target="_blank"
           className="project__github--wrapper--link"
         >
-          <div className="project__github--wrapper">
+          <div className="project__github--wrapper project__github--wrapper--projects">
             <svg
               className="project__github"
               role="img"

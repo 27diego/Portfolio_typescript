@@ -1,3 +1,8 @@
+type NavBarProps = {
+  setMain: React.Dispatch<React.SetStateAction<boolean>>;
+  main: boolean;
+};
+
 type CardProps = {
   logo: string;
   header: string;

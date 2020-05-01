@@ -14,6 +14,7 @@ export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
   const [label, setLabel] = useState<boolean>(false);
   const [hideToggle, sethideToggle] = useState<boolean>(true);
 
+  //memory leak
   useEffect(() => {
     setTimeout(() => {
       setShow("hide");

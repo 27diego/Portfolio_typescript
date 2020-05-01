@@ -3,6 +3,19 @@
 .Container--More {
   padding: 1rem 2rem;
   position: relative;
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main {
+  min-width: 100%;
+  // height: 100vh;
 }
 
 .name {
@@ -99,88 +112,11 @@
   }
 }
 
-.about {
-  width: 100%;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: opacity 1s ease;
-
-  &--hide {
-    opacity: 0;
-  }
-  &--show {
-    opacity: 1;
-  }
-
-  &__main {
-    color: $dark-white;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 45rem;
-      background-color: $dark-white;
-    }
-    &::before {
-      margin-right: 5rem;
-    }
-    &::after {
-      margin-left: 5rem;
-    }
-  }
+.sideswipe {
+  background-color: red;
+  height: 97vh;
+  min-width: 100%;
 }
-
-.section {
-  padding-top: 5rem;
-  width: 100%;
-  display: flex;
-  &__img {
-    height: 40rem;
-    display: block;
-    &--left {
-      &--initial {
-        transform: translateX(30rem);
-      }
-      &--load {
-        transition: all 1s ease-in-out;
-        transform: translateX(-7rem);
-      }
-    }
-  }
-
-  .info {
-    width: 50%;
-    align-self: center;
-    transition: opacity 2s ease;
-
-    &--load {
-      opacity: 1;
-    }
-    &--initial {
-      opacity: 0;
-    }
-
-    &__header {
-      font-size: 4rem;
-      color: $dark-white;
-    }
-    &__body {
-      font-size: 1.2rem;
-      color: $dark-white;
-      column-count: 2;
-      width: 70%;
-    }
-  }
-}
-
 @keyframes nameHead {
   0% {
     opacity: 0;

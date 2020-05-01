@@ -21,11 +21,9 @@ export const Love: React.FC = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
       hiddenDes: {
         title1: "UX",
-        paragraph1:
-          "Creating a strong foundation for a website means getting the HTMLand CSS architecture right.If you’ve got a design I can createvthe front- end code for it.",
+        paragraph1: "...",
         title2: "UI",
-        paragraph2:
-          "Having a fast website is key to keeping people around which ultimately converts them into customers.There are a myriad of techniques involved in making a fast website, all of which I’ve spent years learning.I build these techniques into every site I code and can also offer this as a standalone service for existing websites.",
+        paragraph2: "...",
       },
     },
     {

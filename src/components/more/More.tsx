@@ -81,9 +81,9 @@ export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
         />
       </div>
 
-      <div ref={side} className="sideswipe">
+      {/* <div ref={side} className="sideswipe">
         <span>Hello</span>
-      </div>
+      </div> */}
     </div>
   );
 };

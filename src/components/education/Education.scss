@@ -20,11 +20,11 @@
   @include respond(phone) {
     height: 70vh;
   }
-  @include respond(phonex) {
-    height: 70vh;
-  }
   @include respond(phone-land) {
     height: 130vh;
+  }
+  @include respond(phonex) {
+    height: 70vh;
   }
 }
 

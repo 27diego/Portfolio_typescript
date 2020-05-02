@@ -22,11 +22,11 @@
     height: 60vh;
     overflow: hidden;
   }
-  @include respond(phone) {
-    height: 53vh;
-  }
   @include respond(phone-land) {
     height: 100vh;
+  }
+  @include respond(phone) {
+    height: 53vh;
   }
 }
 

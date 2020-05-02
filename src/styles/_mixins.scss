@@ -28,6 +28,12 @@
     }
   }
 
+  @if $breakpoint == phone-land {
+    @media (min-device-height: 375px) and (max-device-width: 812px) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;

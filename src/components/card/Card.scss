@@ -11,6 +11,10 @@
   z-index: 7;
   position: absolute;
 
+  @include respond(phone-land) {
+    height: 45rem;
+  }
+
   //moves other cards to right
   &--active {
     z-index: 100;

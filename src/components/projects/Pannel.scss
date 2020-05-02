@@ -51,6 +51,11 @@
       @include respond(phonex) {
         left: 1.5rem;
       }
+      @include respond(phone-land) {
+        font-size: 2.5rem;
+        left: 1.5;
+        width: 10%;
+      }
     }
   }
   &--noExpand {
@@ -82,6 +87,11 @@
       }
       @include respond(phonex) {
         left: 1.5rem;
+      }
+      @include respond(phone-land) {
+        font-size: 2.5rem;
+        left: 1.5;
+        width: 10%;
       }
     }
   }
@@ -133,7 +143,9 @@
     left: 25rem;
     top: 14rem;
 
-    @include respond(tab-port) {
+    @include respond(phone-land) {
+      left: 57rem;
+      width: 5rem;
     }
   }
 
@@ -155,6 +167,9 @@
     }
     @include respond(phonex) {
       height: 60%;
+    }
+    @include respond(phone-land) {
+      height: 70%;
     }
   }
 
@@ -245,6 +260,10 @@
     }
     @include respond(phonex) {
       visibility: hidden;
+    }
+    @include respond(phone-land) {
+      height: 90%;
+      width: 90%;
     }
   }
 }

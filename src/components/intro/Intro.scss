@@ -16,6 +16,9 @@
   @include respond(phone) {
     height: 55vh;
   }
+  @include respond(phone-land) {
+    height: 110vh;
+  }
 
   .resumeContainer {
     position: relative;

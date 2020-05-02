@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./More.scss";
 
-import portrait from "../../images/me.jpg";
+import portrait from "../../images/portrait.png";
 
 export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
   const [activate, setActivate] = useState<boolean>(false);

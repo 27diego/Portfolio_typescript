@@ -22,7 +22,7 @@
   font-size: 13rem;
   font-weight: 400;
   color: $dark-white;
-  margin: -1rem auto;
+  margin: 5rem auto;
 
   &__container {
     display: flex;
@@ -93,14 +93,15 @@
 }
 
 .portrait {
-  width: 50rem;
+  width: 40rem;
   border-radius: 5px;
   display: block;
-  margin: 0 auto;
-  margin-top: 3rem;
+  // margin: 0 auto;
 
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   transition: opacity 1s ease;
 

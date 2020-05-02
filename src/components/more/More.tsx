@@ -10,7 +10,7 @@ export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
   const side: any = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("wheel", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
@@ -23,7 +23,10 @@ export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
   }, [activate]);
 
   const onScroll = () => {
-    console.log("position of element: ", side.current?.getBoundingClientRect());
+    // console.log("position of element: ", side.current?.getBoundingClientRect());
+    if (side.current?.getBoundingClientRect().x < 201) {
+      console.log("ON SCREEN");
+    }
   };
 
   return (
@@ -81,9 +84,9 @@ export const More: React.FC<NavBarProps> = ({ main, setMain }) => {
         />
       </div>
 
-      {/* <div ref={side} className="sideswipe">
+      <div ref={side} className="sideswipe">
         <span>Hello</span>
-      </div> */}
+      </div>
     </div>
   );
 };

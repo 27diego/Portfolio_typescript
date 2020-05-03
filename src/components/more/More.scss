@@ -93,7 +93,7 @@
 }
 
 .portrait {
-  width: 40rem;
+  width: 30rem;
   border-radius: 5px;
   display: block;
   // margin: 0 auto;
@@ -113,11 +113,34 @@
   }
 }
 
-.sideswipe {
-  background-color: red;
-  height: 97vh;
-  min-width: 100%;
+.section {
+  // height: 97vh;
+  // min-width: 100%;
+  &--why {
+    margin-left: 0rem;
+  }
+  margin: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  &__img {
+    width: 55rem;
+  }
+
+  &__description {
+    width: 50rem;
+    font-size: 1.7rem;
+    color: #fff;
+    column-count: 2;
+    line-height: 2.5rem;
+    display: block;
+    margin: 2rem auto 0 auto;
+  }
 }
+
 @keyframes nameHead {
   0% {
     opacity: 0;

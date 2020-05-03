@@ -17,13 +17,13 @@ export const Love: React.FC = () => {
       header: "Design",
       paragraph:
         "From a sketch pad to Adobe XD I design all the components on my projects coming up with a beautiful UI, animations and color schemes",
-      longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
       hiddenDes: {
         title1: "UX",
-        paragraph1: "...",
+        paragraph1:
+          "An important part of wether a user comes back to a website is how the user remembers the interactions it had with the product. I like to first identify the target audience that the product will have and design the product around that target audience. I try to convey the feeling of how the website should be to both serve it's purpose and make the user feel comfortable. This could be how easy it is for a user to achieve their goals, or the mini interactions they had with the product.",
         title2: "UI",
-        paragraph2: "...",
+        paragraph2:
+          "Once the structure of how the product should feel is concerte, I try and connect the pieces of what the product should look like to achieve that feeling. The process I choose is to usually go with deciding which colors and fonts the site should have. I then choose the layout along with images and combine components with special animations to make the product as pleasing for the end user as it can. Once I mock up my designs I get ready for development.",
       },
     },
     {
@@ -31,8 +31,6 @@ export const Love: React.FC = () => {
       header: "Develop",
       paragraph:
         "Every project of mine is developed in an organic way, with sticking to my designs and using pure scss and javascript I am able to develop components from scratch and make them come to life",
-      longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
       hiddenDes: {
         title1: "Development",
         paragraph1:
@@ -47,8 +45,6 @@ export const Love: React.FC = () => {
       header: "Problem Solve",
       paragraph:
         "I believe that problem solving is a critical part of designing and developing, so I always try to improve my skills practicing my problem solving from coding to communication",
-      longParagragh:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae nihil eaque quos modi eos, unde dolor delectus vero, nostrum, iste reprehenderit. Natus vero excepturi quia aspernatur ab magnam odio.",
       hiddenDes: {
         title1: "Communication",
         paragraph1:
@@ -82,7 +78,6 @@ export const Love: React.FC = () => {
               logo={item.logo}
               header={item.header}
               paragraph={item.paragraph}
-              longParagraph={item.longParagragh}
               hiddenDes={item.hiddenDes}
               containerSize={containerSize}
             />

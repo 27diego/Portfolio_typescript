@@ -7,7 +7,6 @@ export const Card: React.FC<CardProps> = ({
   logo,
   header,
   paragraph,
-  longParagraph,
   hiddenDes,
   containerSize,
 }) => {

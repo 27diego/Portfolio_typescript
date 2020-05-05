@@ -6,10 +6,10 @@ import "./Pannel.scss";
 export const Pannel: React.FC<Projects> = ({
   title,
   logo,
-  options,
   icons,
   landing,
   link,
+  description,
 }) => {
   const [expand, setExpand] = useState<boolean>(false);
 
@@ -43,6 +43,9 @@ export const Pannel: React.FC<Projects> = ({
           ))}
         </div>
         <img className="project__landing" src={landing} alt="landing page" />
+        <div className={`project__description project__description--${title}`}>
+          {description}
+        </div>
         <a
           href={link}
           rel="noopener noreferrer"

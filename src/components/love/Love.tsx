@@ -16,7 +16,7 @@ export const Love: React.FC = () => {
       logo: designLogo,
       header: "Design",
       paragraph:
-        "From a sketch pad to Adobe XD I design all the components on my projects coming up with a beautiful UI, animations and color schemes",
+        "From a sketch pad to Adobe XD I design the components on my projects coming up with a beautiful UI, animations and color schemes",
       hiddenDes: {
         title1: "UX",
         paragraph1:

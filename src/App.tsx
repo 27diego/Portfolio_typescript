@@ -35,14 +35,7 @@ const App = () => {
 
   return (
     <ThemeContextProvider>
-      <div
-        className="App"
-        style={{
-          height: "100vh",
-          overflowX: "hidden",
-          position: "relative",
-        }}
-      >
+      <div className="App" style={{ height: "100%", position: "relative" }}>
         {main ? (
           <React.Fragment>
             <Navbar main={main} setMain={setMain} />

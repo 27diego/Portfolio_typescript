@@ -35,12 +35,12 @@ export const Projects: React.FC = () => {
     {
       title: "Smart Brain",
       logo: brain,
-      options: {
-        width: "",
-      },
+
       icons: [react, js, css, node, postgresql, redis],
       landing: smartbrain,
       link: "https://github.com/27diego/smart-brain-front",
+      description:
+        "A simple Face Detection App that allows users to upload faces and gives score on clarity of image.",
     },
     {
       title: "Monterey Mushrooms",
@@ -48,6 +48,8 @@ export const Projects: React.FC = () => {
       landing: sopIndex,
       icons: [react, redux, typescript, scss, node, mongo, docker],
       link: "https://github.com/27diego/MM-index",
+      description:
+        "An Admin dashboard that allows admin to upload and manage documents, and users to view documents.",
     },
 
     {
@@ -56,6 +58,8 @@ export const Projects: React.FC = () => {
       landing: CIGLanding,
       icons: [react, redux, css, node, mongo, redis],
       link: "https://github.com/27diego/CapStone-Backend",
+      description:
+        "A dashboard that allows admin to monitor new hire employee's progress of signing documents and reading the handbook.",
     },
   ]);
 
@@ -67,10 +71,10 @@ export const Projects: React.FC = () => {
             key={item.title}
             title={item.title}
             logo={item.logo}
-            options={item.options}
             icons={item.icons}
             landing={item.landing}
             link={item.link}
+            description={item.description}
           />
         ))}
       </div>

@@ -19,12 +19,10 @@ type CardProps = {
 type Projects = {
   title: string;
   logo: string;
-  options?: {
-    width: string;
-  };
   landing: string;
   icons: string[];
   link: string;
+  description: string;
 };
 
 type SkillsModal = {

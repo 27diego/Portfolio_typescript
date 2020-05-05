@@ -17,14 +17,15 @@ export const Intro = () => {
   }, 3000);
 
   useEffect(() => {
-    window.addEventListener("wheel", onWindowScroll);
+    window.addEventListener("scroll", onWindowScroll);
     return () => {
-      window.removeEventListener("wheel", onWindowScroll);
+      window.removeEventListener("scroll", onWindowScroll);
     };
   }, []);
 
   const onWindowScroll = () => {
-    if (indicator.current!.getBoundingClientRect().top < 400) {
+    console.log("Scroll working");
+    if (indicator.current!.getBoundingClientRect().top < 450) {
       setIndicatorPos("outScreen");
     } else {
       setIndicatorPos("inScreen");
@@ -32,10 +33,7 @@ export const Intro = () => {
   };
 
   return (
-    <div
-      onScroll={() => console.log("Wheel works")}
-      className={`intro intro--${theme}`}
-    >
+    <div className={`intro intro--${theme}`}>
       <div className="resumeContainer">
         <a
           className="intro__resumeLink"

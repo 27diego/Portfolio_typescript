@@ -5,7 +5,7 @@ import why from "../../images/images for grid/why.jpg";
 
 export const Why = () => {
   return (
-    <div className="content">
+    <div className="contentself">
       <div className="image__container">
         <img src={why} alt="coding" className="image" />
       </div>
@@ -26,7 +26,7 @@ export const Why = () => {
 };
 export const Background = () => {
   return (
-    <div className="content">
+    <div className="contentself">
       <div className="image__container">
         <img src={why} alt="coding" className="image" />
       </div>
@@ -51,7 +51,7 @@ export const Background = () => {
 };
 export const Hobby = () => {
   return (
-    <div className="content">
+    <div className="contentself">
       <div className="image__container">
         <img src={why} alt="coding" className="image" />
       </div>
@@ -77,7 +77,7 @@ export const Hobby = () => {
 };
 export const Future = () => {
   return (
-    <div className="content">
+    <div className="contentself">
       <div className="image__container">
         <img src={why} alt="coding" className="image" />
       </div>

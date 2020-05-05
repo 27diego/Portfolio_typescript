@@ -2,6 +2,9 @@ import React from "react";
 import "./Content.scss";
 
 import why from "../../images/images for grid/why.jpg";
+import guitar from "../../images/images for grid/guitar.jpg";
+import farm from "../../images/images for grid/farm.jpg";
+import office from "../../images/images for grid/office.jpg";
 
 export const Why = () => {
   return (
@@ -28,7 +31,11 @@ export const Background = () => {
   return (
     <div className="contentself">
       <div className="image__container">
-        <img src={why} alt="coding" className="image" />
+        <img
+          src={farm}
+          alt="by Gabriel Jimenez on Unsplash"
+          className="image"
+        />
       </div>
       <div className="description__wrapper">
         <div className="description">
@@ -53,7 +60,7 @@ export const Hobby = () => {
   return (
     <div className="contentself">
       <div className="image__container">
-        <img src={why} alt="coding" className="image" />
+        <img src={guitar} alt="by Tony Rojas on Unsplash" className="image" />
       </div>
       <div className="description__wrapper">
         <div className="description">
@@ -79,7 +86,7 @@ export const Future = () => {
   return (
     <div className="contentself">
       <div className="image__container">
-        <img src={why} alt="coding" className="image" />
+        <img src={office} alt="by İrfan Simsar on Unsplash" className="image" />
       </div>
       <div className="description__wrapper">
         <div className="description">
@@ -89,9 +96,9 @@ export const Future = () => {
             DevOps engineer and to do that I have to master full stack
             development. That means constant learning and working on new
             projects to expand my skillset in order to adapt to new challenges
-            as efficiently as possible. It\'92s a long path go where I want to
-            be but everyday offers a new opportunity to get closer to new goals
-            and heights.
+            as efficiently as possible. It's a long path get where I want to go
+            but everyday offers a new opportunity to get closer to new goals and
+            heights.
           </p>
         </div>
       </div>

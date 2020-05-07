@@ -14,7 +14,7 @@ export const Why = () => {
       </div>
       <div className="description__wrapper">
         <div className="description">
-          <div className="description__header">Why I choose this...</div>
+          <div className="description__header">Why I choose SE...</div>
           <p className="description__body">
             The reason I choose to dedicate myself to this is because I enjoy
             web development and I enjoy creating. I look at a blank screen like
@@ -39,7 +39,7 @@ export const Background = () => {
       </div>
       <div className="description__wrapper">
         <div className="description">
-          <div className="description__header">I come from ...</div>
+          <div className="description__header">I come from...</div>
           <p className="description__body">
             I come from a family of hard workers and self made individuals. My
             parents went from working in the Salinas valley fields and going to

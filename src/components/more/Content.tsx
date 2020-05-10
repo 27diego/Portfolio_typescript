@@ -39,7 +39,7 @@ export const Background = () => {
       </div>
       <div className="description__wrapper">
         <div className="description">
-          <div className="description__header">I come from...</div>
+          <div className="description__header">I come from</div>
           <p className="description__body">
             I come from a family of hard workers and self made individuals. My
             parents went from working in the Salinas valley fields and going to

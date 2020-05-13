@@ -64,19 +64,23 @@ export const Hobby = () => {
       </div>
       <div className="description__wrapper">
         <div className="description">
-          <div className="description__header">When I'm not coding<div>
-          <p className="description__body">
-            When I'm not coding or designing potential projects, I can be found
-            either learning new songs on my guitar or lifting weights. Playing
-            the guitar is another way I can open my mind to new creative ideas
-            not only on how to play a certain melody but also on how to come up
-            with new designs and new ways to tackle developing problems. As for
-            lifting I enjoy being active and trying to stay healthy so it is
-            something that I like to challenge myself with. Lifting gave me a
-            stronger sense of if I can put my mind to it, I can achieve it and
-            it worked! In my first 10-12 months of lifting I gained 20lbs of
-            muscle!\
-          </p>
+          <div className="description__header">
+            When I'm not coding
+            <div>
+              <p className="description__body">
+                When I'm not coding or designing potential projects, I can be
+                found either learning new songs on my guitar or lifting weights.
+                Playing the guitar is another way I can open my mind to new
+                creative ideas not only on how to play a certain melody but also
+                on how to come up with new designs and new ways to tackle
+                developing problems. As for lifting I enjoy being active and
+                trying to stay healthy so it is something that I like to
+                challenge myself with. Lifting gave me a stronger sense of if I
+                can put my mind to it, I can achieve it and it worked! In my
+                first 10-12 months of lifting I gained 20lbs of muscle!\
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

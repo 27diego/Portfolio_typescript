@@ -64,7 +64,7 @@ export const Hobby = () => {
       </div>
       <div className="description__wrapper">
         <div className="description">
-          <div className="description__header">When I'm not coding...</div>
+          <div className="description__header">When I'm not coding<div>
           <p className="description__body">
             When I'm not coding or designing potential projects, I can be found
             either learning new songs on my guitar or lifting weights. Playing

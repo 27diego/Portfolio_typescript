@@ -12,12 +12,14 @@
   @include respond(tab-port) {
     height: 75vh;
   }
-
   @include respond(phone-land) {
     height: 110vh;
   }
   @include respond(phone) {
     height: 55vh;
+  }
+  @include respond(tab-port-height) {
+    height: 50vh;
   }
 
   .resumeContainer {

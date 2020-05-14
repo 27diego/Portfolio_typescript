@@ -28,6 +28,9 @@
   @include respond(phone) {
     height: 53vh;
   }
+  @include respond(tab-port-height) {
+    height: 50vh;
+  }
 }
 
 .Card {

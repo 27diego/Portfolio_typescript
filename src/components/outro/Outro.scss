@@ -81,11 +81,18 @@
     color: $dark-white;
     font-size: 1.3rem;
 
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+
     &--dark {
       background-color: $dark-black;
       &::placeholder {
         color: rgba($dark-white, 0.5);
         font-size: 1.3rem;
+        @include respond(tab-land) {
+          font-size: 2rem;
+        }
       }
     }
     &--light {
@@ -94,6 +101,9 @@
       &::placeholder {
         color: $light-black;
         font-size: 1.3rem;
+        @include respond(tab-land) {
+          font-size: 2rem;
+        }
       }
     }
 

@@ -68,7 +68,7 @@
     border: solid #fff 1px;
 
     @include respond(tab-land) {
-      left: 6rem;
+      left: 3rem;
     }
 
     @include respond(tab-port) {

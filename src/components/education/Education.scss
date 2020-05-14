@@ -26,6 +26,9 @@
   @include respond(phonex) {
     height: 70vh;
   }
+  @include respond(tab-port-height) {
+    height: 50vh;
+  }
 }
 
 .EdHeader {

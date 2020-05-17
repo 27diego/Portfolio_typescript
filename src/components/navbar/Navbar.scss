@@ -34,10 +34,12 @@
 
     @include respond(phone) {
       visibility: hidden;
+      display: none;
     }
 
     @include respond(phonex) {
       visibility: hidden;
+      display: none;
     }
     @include respond(tab-land) {
       left: 2rem;
@@ -342,7 +344,7 @@
     width: 66.97%;
   }
   100% {
-    transform: rotate(50deg);
+    transform: rotate(50deg) translateY(1px);
     width: 100%;
   }
 }

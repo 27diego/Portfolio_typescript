@@ -14,9 +14,6 @@
     background-color: $light-bg;
   }
 
-  @include respond(tab-port) {
-    height: 70vh;
-  }
   @include respond(phone) {
     height: 70vh;
   }
@@ -26,8 +23,11 @@
   @include respond(phonex) {
     height: 70vh;
   }
-  @include respond(tab-port-height) {
+  @include respond(tab-port) {
     height: 50vh;
+  }
+  @include respond(tab-land) {
+    height: 92vh;
   }
 }
 

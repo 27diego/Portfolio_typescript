@@ -10,16 +10,16 @@
   margin-bottom: -1px;
 
   @include respond(tab-port) {
-    height: 75vh;
+    height: 50vh;
+  }
+  @include respond(tab-land) {
+    height: 80vh;
   }
   @include respond(phone-land) {
     height: 110vh;
   }
   @include respond(phone) {
     height: 55vh;
-  }
-  @include respond(tab-port-height) {
-    height: 50vh;
   }
 
   .resumeContainer {

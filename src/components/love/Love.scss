@@ -14,22 +14,19 @@
   &--dark {
     background-color: $dark-bg;
   }
-  @include respond(tab-land) {
-    height: 70vh;
-    overflow: hidden;
-  }
-  @include respond(tab-port) {
-    height: 60vh;
-    overflow: hidden;
-  }
+
   @include respond(phone-land) {
     height: 100vh;
   }
   @include respond(phone) {
     height: 53vh;
   }
-  @include respond(tab-port-height) {
+  @include respond(tab-port) {
     height: 50vh;
+  }
+  @include respond(tab-land) {
+    height: 70vh;
+    overflow: hidden;
   }
 }
 

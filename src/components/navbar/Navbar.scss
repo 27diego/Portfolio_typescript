@@ -32,6 +32,13 @@
     left: 5rem;
     top: 3.5rem;
 
+    &--show {
+      opacity: 0;
+    }
+    &--hide {
+      opacity: 1;
+    }
+
     @include respond(phone) {
       visibility: hidden;
       display: none;
@@ -316,6 +323,13 @@
 
   @include respond(tab-port) {
     right: 4rem;
+  }
+
+  &--show {
+    opacity: 0;
+  }
+  &--hide {
+    opacity: 1;
   }
 
   &--light {

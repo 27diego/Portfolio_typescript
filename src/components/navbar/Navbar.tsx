@@ -35,7 +35,9 @@ export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
         href={"https://github.com/27diego/Portfolio_typescript"}
         rel="noopener noreferrer"
         target="_blank"
-        className="project__github--wrapper--link"
+        className={`project__github--wrapper--link project__github--wrapper--link--${
+          show === "show" ? "hide" : "show"
+        }`}
         onMouseEnter={(): void => setLabel(true)}
         onMouseLeave={(): void => setLabel(false)}
       >
@@ -146,7 +148,9 @@ export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
 
       <button
         onClick={() => toggleTheme()}
-        className={`themebtn themebtn--${theme}`}
+        className={`themebtn themebtn--${theme} themebtn--${
+          show === "show" ? "hide" : "show"
+        }`}
       >
         <img
           className={`img img--${theme}`}

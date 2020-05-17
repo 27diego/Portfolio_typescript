@@ -7,6 +7,7 @@
   display: grid;
   grid-template-rows: 20% 80%;
   position: relative;
+  overflow-x: hidden;
 
   &--light {
     background-color: $light-bg;

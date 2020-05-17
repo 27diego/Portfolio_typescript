@@ -34,6 +34,12 @@ html {
   @include respond(phone) {
     font-size: 5px;
   }
+  @include respond(phone-land) {
+    font-size: 7px;
+  }
+  @include respond(phonex) {
+    font-size: 5px;
+  }
 
   font-family: Helvetica;
 }

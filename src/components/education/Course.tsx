@@ -34,6 +34,8 @@ export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
     if (container.current!.getBoundingClientRect().width < 100) {
       if (container.current!.getBoundingClientRect().top < 681) {
         openExpand();
+      } else {
+        closeExpand();
       }
     }
   };

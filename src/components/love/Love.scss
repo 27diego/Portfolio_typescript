@@ -21,6 +21,9 @@
   @include respond(phone) {
     height: 53vh;
   }
+  @include respond(phonex) {
+    height: 53vh;
+  }
   @include respond(tab-port) {
     height: 50vh;
   }

@@ -14,7 +14,6 @@ export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
   const [label, setLabel] = useState<boolean>(false);
   const [hideToggle, sethideToggle] = useState<boolean>(true);
 
-  //memory leak
   useEffect(() => {
     setTimeout(() => {
       setShow("hide");
@@ -57,7 +56,11 @@ export const Navbar: React.FC<NavBarProps> = ({ main, setMain }) => {
           <p>source code for this project</p>
         </div>
       )}
-      <div className={`nav nav--${theme}`}>
+      <div
+        className={`nav nav--${theme} nav--${
+          show === "show" ? "hide" : "show"
+        }`}
+      >
         <ul className="navbar">
           <Link
             onClick={(): void =>

@@ -24,7 +24,6 @@ export const Intro = () => {
   }, []);
 
   const onWindowScroll = () => {
-    console.log("Scroll working");
     if (indicator.current!.getBoundingClientRect().top < 450) {
       setIndicatorPos("outScreen");
     } else {

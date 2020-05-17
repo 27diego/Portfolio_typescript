@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import "./Course.scss";
 
@@ -10,6 +10,7 @@ interface PROPS {
 
 export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
   const [expand, setExpand] = useState(false);
+  const container = useRef<HTMLDivElement>(null);
 
   const openExpand = () => {
     setExpand(true);
@@ -22,8 +23,23 @@ export const Course: React.FC<PROPS> = ({ title, icon, description }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
 
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  });
+
+  const onScroll = () => {
+    if (container.current!.getBoundingClientRect().width < 100) {
+      if (container.current!.getBoundingClientRect().top < 681) {
+        openExpand();
+      }
+    }
+  };
+
   return (
-    <div className="Container--Course">
+    <div ref={container} className="Container--Course">
       <div
         onMouseLeave={closeExpand}
         className={`CourseCard CourseCard--${theme} CourseCard--${expand}`}

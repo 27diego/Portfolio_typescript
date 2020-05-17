@@ -77,7 +77,7 @@ export const Hobby = () => {
                 trying to stay healthy so it is something that I like to
                 challenge myself with. Lifting gave me a stronger sense of if I
                 can put my mind to it, I can achieve it and it worked! In my
-                first 10-12 months of lifting I gained 20lbs of muscle!\
+                first 10-12 months of lifting I gained 20lbs of muscle!
               </p>
             </div>
           </div>

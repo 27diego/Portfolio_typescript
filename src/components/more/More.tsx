@@ -1,7 +1,7 @@
 import React from "react";
 import "./More.scss";
 
-import portrait from "../../images/portrait.png";
+import portrait from "../../images/me.jpg";
 
 import Particles, { HoverMode } from "react-particles-js";
 import { Why } from "./Content";

@@ -20,7 +20,7 @@ export const Why = () => {
             web development and I enjoy creating. I look at a blank screen like
             as if it is a drawing board where I can come up with something and
             make it turn to life. It gives me that same artistic feeling of
-            playing the guitar. It is something that I can say I love to do
+            playing the guitar. It is something that I can say I love to do.
           </p>
         </div>
       </div>

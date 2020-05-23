@@ -54,6 +54,15 @@
     }
   }
 
+  //desktop queries
+
+  //med 67.5em
+  @if $breakpoint == med-desktop {
+    @media (mid-width: 67.5em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == big-desktop {
     @media (min-width: 112.5em) {
       @content;

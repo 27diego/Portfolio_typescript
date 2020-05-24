@@ -72,6 +72,13 @@
     align-self: center;
     justify-self: start;
 
+    &--dark {
+      color: $dark-white;
+    }
+    &--light {
+      color: $light-black;
+    }
+
     @include respond(phone) {
       margin-left: 5rem;
     }

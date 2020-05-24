@@ -91,7 +91,9 @@ export const Card: React.FC<CardProps> = ({
             alt="brush"
           />
           <h2 className="Card__content__header">{header}</h2>
-          <p className="Card__content__info">{paragraph}</p>
+          <p className={`Card__content__info Card__content__info--${theme}`}>
+            {paragraph}
+          </p>
         </div>
       </div>
     </div>

@@ -50,7 +50,9 @@ export const Education: React.FC = () => {
           </span>
         </div>
         <img className="EdHeader__img" src={school} alt="csumb logo" />
-        <div className="EdHeader__school">@ CSUMB</div>
+        <div className={`EdHeader__school EdHeader__school--${theme}`}>
+          @ CSUMB
+        </div>
       </div>
       <div className="courses">
         {courses.map((item) => (

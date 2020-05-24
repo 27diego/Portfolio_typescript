@@ -159,6 +159,12 @@
 
       .Card__content__info {
         font-size: 1.8rem;
+        &--dark {
+          color: $dark-white;
+        }
+        &--light {
+          color: $light-black;
+        }
       }
     }
   }

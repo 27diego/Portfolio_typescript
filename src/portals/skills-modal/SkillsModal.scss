@@ -130,7 +130,8 @@
     &--1 {
       position: absolute;
       top: 60%;
-      left: 45%;
+      left: 50%;
+      transform: translateX(-50%);
 
       &--active {
         top: 60%;
@@ -140,16 +141,18 @@
     &--2 {
       position: absolute;
       top: 60%;
-      left: 48%;
+      left: 50%;
+      transform: translateX(-50%);
       &--active {
         top: 80%;
-        left: 48%;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
     &--3 {
       position: absolute;
       top: 60%;
-      right: 40%;
+      right: 50%;
 
       &--active {
         top: 60%;

@@ -14,7 +14,6 @@
   }
 
   @include respond(phonex) {
-    height: 87vh;
   }
   @include respond(phone-land) {
   }
@@ -38,6 +37,14 @@
   font-weight: 400;
   color: $dark-white;
   margin: 5rem auto;
+
+  @include respond(phonex) {
+    margin: 20rem auto;
+  }
+
+  @include respond(phone) {
+    margin: 20rem auto;
+  }
 
   &__container {
     display: flex;
@@ -120,6 +127,19 @@
 
   transition: opacity 1s ease;
 
+  @include respond(phonex) {
+    width: 70rem;
+    bottom: 55rem;
+  }
+  @include respond(phone-land) {
+    width: 35rem;
+    bottom: 5rem;
+  }
+  @include respond(phone) {
+    width: 70rem;
+    bottom: 55rem;
+  }
+
   &--hide {
     opacity: 0;
   }
@@ -167,6 +187,22 @@
   height: 10rem;
   z-index: 1000;
 
+  @include respond(phonex) {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10rem;
+    width: 30rem;
+  }
+  @include respond(phone-land) {
+    bottom: 0;
+  }
+  @include respond(phone) {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10rem;
+    width: 30rem;
+  }
+
   &--hide {
     opacity: 0;
   }
@@ -206,16 +242,46 @@
     transition: all 0.5s ease;
     position: absolute;
 
+    @include respond(phonex) {
+      width: 15rem;
+      height: 15rem;
+    }
+    @include respond(phone) {
+      width: 15rem;
+      height: 15rem;
+    }
+
     &--left {
       right: 11rem;
+      @include respond(phonex) {
+        right: 17rem;
+      }
+      @include respond(phone) {
+        right: 17rem;
+      }
     }
     &--right {
       left: 11rem;
+      @include respond(phonex) {
+        left: 17rem;
+      }
+      @include respond(phone) {
+        left: 17rem;
+      }
     }
 
     &:hover {
       width: 6rem;
       height: 6rem;
+
+      @include respond(phonex) {
+        width: 16rem;
+        height: 16rem;
+      }
+      @include respond(phone) {
+        width: 16rem;
+        height: 16rem;
+      }
     }
   }
 }

@@ -72,7 +72,7 @@ export const Skills: React.FC = () => {
               viewBox="0 0 841.9 595.3"
               className={`skills__icon skills__icon--react skills__icon--react--${
                 active === "react" ? "active" : ""
-              }`}
+              } skills__icon--react--${theme === "light" ? "active" : ""}`}
               style={{ height: "70%" }}
               onClick={() => {
                 setModal(true);
@@ -131,7 +131,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--redux skills__icon--redux--${
                 active === "redux" ? "active" : ""
-              }`}
+              } skills__icon--redux--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 setModal(true);
                 changeModal("redux", redux, {
@@ -160,7 +160,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--css skills__icon--css--${
                 active === "css" ? "active" : ""
-              }`}
+              } skills__icon--css--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 setModal(true);
                 changeModal("css", css, {
@@ -189,7 +189,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--html  skills__icon--html--${
                 active === "html" ? "active" : ""
-              } `}
+              } skills__icon--html--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("html", html, { one: "", two: "", three: "" });
               }}
@@ -213,7 +213,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--js skills__icon--js--${
                 active === "js" ? "active" : ""
-              }`}
+              } skills__icon--js--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 setModal(true);
                 changeModal("js", js, {
@@ -243,7 +243,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--npm skills__icon--npm--${
                 active === "npm" ? "active" : ""
-              }`}
+              } skills__icon--npm--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("npm", npm, { one: "", two: "", three: "" });
               }}
@@ -275,7 +275,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--node skills__icon--node--${
                 active === "node" ? "active" : ""
-              }`}
+              } skills__icon--node--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 setModal(true);
                 changeModal("node", node, {
@@ -304,7 +304,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--mongodb skills__icon--mongodb--${
                 active === "mongodb" ? "active" : ""
-              }`}
+              } skills__icon--mongodb--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("mongodb", mongodb, {
                   one: "",
@@ -332,7 +332,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--docker skills__icon--docker--${
                 active === "docker" ? "active" : ""
-              }`}
+              } skills__icon--docker--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 setModal(true);
                 changeModal("docker", docker, {
@@ -361,7 +361,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--redis skills__icon--redis--${
                 active === "redis" ? "active" : ""
-              }`}
+              } skills__icon--redis--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("redis", redis, {
                   one: "",
@@ -382,14 +382,14 @@ export const Skills: React.FC = () => {
               Redis
             </div>
           </div>
-         
+
           <div className={`container--icon container--icon--${theme}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
               className={`skills__icon skills__icon--lock skills__icon--lock--${
                 active === "lock" ? "active" : ""
-              }`}
+              } skills__icon--lock--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("lock", postgresql, {
                   one: "",
@@ -418,7 +418,7 @@ export const Skills: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
               className={`skills__icon skills__icon--postgresql skills__icon--postgresql--${
                 active === "postgresql" ? "active" : ""
-                }`}
+              } skills__icon--postgresql--${theme === "light" ? "active" : ""}`}
               onClick={() => {
                 changeModal("postgresql", postgresql, {
                   one: "",
@@ -434,7 +434,7 @@ export const Skills: React.FC = () => {
             <div
               className={`container--icon__label container--icon__label--${
                 label === "postgresql" ? "active" : "nonActive"
-                } container--icon__label--${theme}`}
+              } container--icon__label--${theme}`}
             >
               PostgreSQL
             </div>

@@ -6,7 +6,7 @@
 
   transform: translate(-50%, -50%);
   z-index: 200;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-radius: 5px;
   border: 1px solid rgba($dark-grey-border, 0.5);
 
@@ -129,18 +129,18 @@
 
     &--1 {
       position: absolute;
-      top: 60%;
+      top: 65%;
       left: 50%;
       transform: translateX(-50%);
 
       &--active {
-        top: 60%;
-        left: 10%;
+        top: 65%;
+        left: 18%;
       }
     }
     &--2 {
       position: absolute;
-      top: 60%;
+      top: 65%;
       left: 50%;
       transform: translateX(-50%);
       &--active {
@@ -151,12 +151,12 @@
     }
     &--3 {
       position: absolute;
-      top: 60%;
+      top: 65%;
       right: 50%;
 
       &--active {
-        top: 60%;
-        right: 7%;
+        top: 65%;
+        right: 15%;
       }
     }
   }
@@ -168,6 +168,7 @@
   height: 2.5rem;
   border-radius: 50%;
   position: absolute;
+  transition: all 0.2s;
 
   right: 1rem;
   top: 1rem;
@@ -180,7 +181,6 @@
   .btn--exit {
     height: 1px;
     width: 2rem;
-    // background-color: white;
 
     &:hover {
       cursor: pointer;

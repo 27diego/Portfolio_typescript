@@ -4,10 +4,7 @@ import "./More.scss";
 import portrait from "../../images/me.jpg";
 
 import Particles, { HoverMode } from "react-particles-js";
-import { Why } from "./Content";
-import { Background } from "./Content";
-import { Future } from "./Content";
-import { Hobby } from "./Content";
+import { Why, Background, Future, Hobby, preLoad } from "./Content";
 
 interface Props {
   main: boolean;
@@ -31,6 +28,8 @@ export class More extends React.Component<Props, State> {
     setTimeout(() => {
       this.setState({ activate: true });
     }, 1500);
+
+    preLoad();
   }
 
   increment = () => {

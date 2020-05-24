@@ -6,6 +6,15 @@ import guitar from "../../images/images for grid/guitar.jpg";
 import farm from "../../images/images for grid/farm.jpg";
 import office from "../../images/images for grid/office.jpg";
 
+export const preLoad = () => {
+  const imagesPreload = [why, guitar, farm, office];
+  imagesPreload.forEach((image: any) => {
+    const newImage: any = new Image();
+    newImage.src = image;
+    window[image] = newImage;
+  });
+};
+
 export const Why = () => {
   return (
     <div className="contentself">

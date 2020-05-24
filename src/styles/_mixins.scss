@@ -58,7 +58,18 @@
 
   //med 67.5em
   @if $breakpoint == med-desktop {
-    @media (mid-width: 67.5em) {
+    @media (max-width: 65.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-desktop {
+    @media (max-width: 56.68em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs-desktop {
+    @media (max-width: 46.87em) {
       @content;
     }
   }

@@ -14,6 +14,9 @@
     background-color: $light-bg;
   }
 
+  @include respond(xs-desktop) {
+    height: 80vh;
+  }
   @include respond(phone) {
     height: 70vh;
   }

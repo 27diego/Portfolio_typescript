@@ -9,6 +9,10 @@
   z-index: 100;
   margin-bottom: -1px;
 
+  @include respond(xs-desktop) {
+    height: 80vh;
+  }
+
   @include respond(tab-port) {
     height: 50vh;
   }

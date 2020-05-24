@@ -143,6 +143,11 @@
     left: 25rem;
     top: 14rem;
 
+    @include respond(xs-desktop) {
+      left: 25rem;
+      top: 20rem;
+    }
+
     @include respond(phone-land) {
       left: 57rem;
       width: 5rem;
@@ -156,6 +161,9 @@
     position: absolute;
     bottom: 1rem;
 
+    @include respond(xs-desktop) {
+      height: 50%;
+    }
     @include respond(tab-land) {
       height: 50%;
     }
@@ -183,6 +191,10 @@
     &--CIG {
       width: 10rem;
       right: -12rem;
+    }
+
+    @include respond(xs-desktop) {
+      visibility: hidden;
     }
 
     @include respond(tab-land) {

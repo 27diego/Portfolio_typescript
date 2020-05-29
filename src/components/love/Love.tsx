@@ -23,7 +23,7 @@ export const Love: React.FC = () => {
           "An important part of wether a user comes back to a website is how the user remembers the interactions it had with the product. I like to first identify the target audience that the product will have and design the product around that target audience. I try to convey the feeling of how the website should be to both serve it's purpose and make the user feel comfortable. This could be how easy it is for a user to achieve their goals, or the mini interactions they had with the product.",
         title2: 'UI',
         paragraph2:
-          'Once the structure of how the product should feel is concerte, I try and connect the pieces of what the product should look like to achieve that feeling. The process I choose is to usually go with deciding which colors and fonts the site should have. I then choose the layout along with images and combine components with special animations to make the product as pleasing for the end user as it can. Once I mock up my designs I get ready for development.',
+          'Once the structure of how the product should feel is concrete, I try and connect the pieces of what the product should look like to achieve that feeling. The process I choose is to usually go with deciding which colors and fonts the site should have. I then choose the layout along with images and combine components with special animations to make the product as pleasing for the end user as it can. Once I mock up my designs I get ready for development.',
       },
     },
     {

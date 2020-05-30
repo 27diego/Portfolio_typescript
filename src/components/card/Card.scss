@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .Card {
   perspective: 150rem;
@@ -197,43 +197,6 @@
   }
 }
 
-// .loading-dots {
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   .dots {
-//     &,
-//     &::before,
-//     &::after {
-//       width: 1.5rem;
-//       height: 1.5rem;
-//       background-color: $dark-white;
-//       display: inline-block;
-//       border-radius: 50%;
-//     }
-//     & {
-//       animation: bounce 2s ease infinite;
-//       animation-delay: 0s;
-//     }
-//     &::before {
-//       content: "";
-//       margin-right: -5rem;
-//       animation: bounce 2s ease infinite;
-//       // animation-delay: -1s;
-//     }
-
-//     &::after {
-//       content: "";
-//       margin-left: -5rem;
-//       animation: bounce 2s ease infinite;
-//       animation-delay: -1.5s;
-//     }
-//   }
-// }
-
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -254,8 +217,5 @@
 
 /* NOTES:
     learn about perspective and why we need to have a child for it to take place
-
     why the &:hover &__side statement
-
-
 */

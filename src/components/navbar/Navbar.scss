@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .navContainer {
   position: sticky;
@@ -94,7 +94,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 8.3rem;
@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     border-bottom: 1px solid #707070;
     display: block;
     width: 100%;
@@ -240,7 +240,7 @@
     &::before,
     &::after {
       width: 66.97%;
-      content: "";
+      content: '';
       display: block;
       border-bottom: 1px solid $dark-white;
     }
@@ -251,7 +251,7 @@
     &::before,
     &::after {
       width: 66.97%;
-      content: "";
+      content: '';
       display: block;
       border-bottom: 1px solid #1f1a1b;
     }
@@ -289,6 +289,9 @@
       animation-fill-mode: forwards;
       animation-duration: 1s;
       margin-left: auto;
+      @include respond(phone) {
+        margin-top: -0.04rem;
+      }
     }
   }
 

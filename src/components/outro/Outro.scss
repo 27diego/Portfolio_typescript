@@ -325,10 +325,30 @@
     }
     &--github {
       grid-area: 5/2/6/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &--my {
       cursor: pointer;
       grid-area: 6/2/7/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.moreIcon {
+  height: 7rem;
+  &--light {
+    path {
+      fill: #000;
+    }
+  }
+  &--dark {
+    path {
+      fill: #d4d4d4;
     }
   }
 }

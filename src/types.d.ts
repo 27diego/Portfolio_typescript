@@ -36,3 +36,7 @@ type SkillsModal = {
     three: string;
   };
 };
+
+type OutroProps = {
+  setMain: React.Dispatch<React.SetStateAction<boolean>>;
+};

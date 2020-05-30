@@ -17,6 +17,11 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
   const context = useContext(ThemeContext);
   const { theme } = context;
 
+  const emailSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setForm({ name: '', subject: '', email: '', message: '' });
+  };
+
   const change = (type: string, value: string) => {
     console.log(type);
     switch (type) {
@@ -81,7 +86,9 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
             you on your next project! Send me a message and we’ll go from there.
           </div>
 
-          <button className='btn--Oform'>OK!</button>
+          <button onClick={(e) => emailSubmit(e)} className='btn--Oform'>
+            OK!
+          </button>
         </form>
       </div>
       <div className='container--links'>

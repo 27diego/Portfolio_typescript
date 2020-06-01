@@ -88,6 +88,7 @@
   &__header {
     color: $dark-white;
     font-size: 5rem;
+    margin-left: 2.3rem;
   }
 
   &__body {
@@ -96,6 +97,8 @@
     column-count: 2;
     line-height: 2.5rem;
     width: 50rem;
+
+    margin: 1.5rem auto 0 auto;
 
     @include respond(phone) {
       width: 65rem;

@@ -320,6 +320,10 @@
     right: 5rem;
     width: 7rem;
     height: 7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @include respond(phonex) {
@@ -349,12 +353,8 @@
   }
 
   .img {
-    width: 100%;
+    width: 4.5rem;
     margin-top: 0.4rem;
-
-    @include respond(phone) {
-      margin-top: 0.7rem;
-    }
 
     &--light {
       margin-left: 0.4rem;

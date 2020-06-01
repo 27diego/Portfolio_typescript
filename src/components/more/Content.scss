@@ -66,17 +66,33 @@
   background-color: $dark-black;
   border-radius: 5px;
 
+  &--why {
+    height: 28rem;
+  }
+
   @include respond(phone) {
     background-color: $dark-red;
     height: 42rem;
     width: 70rem;
     margin-top: 13rem;
+    &--why {
+      height: 32rem;
+    }
+    &--future {
+      height: 34rem;
+    }
   }
   @include respond(phonex) {
     background-color: $dark-red;
     height: 42rem;
     width: 70rem;
     margin-top: 25rem;
+    &--why {
+      height: 32rem;
+    }
+    &--future {
+      height: 34rem;
+    }
   }
 
   &__wrapper {

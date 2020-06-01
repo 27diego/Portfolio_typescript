@@ -31,7 +31,7 @@ export const Why = () => {
           <img src={why} alt='coding' className='image' />
         </div>
         <div className='description__wrapper'>
-          <div className='description'>
+          <div className='description description--why'>
             <div className='description__header'>Why I choose SE...</div>
             <p className='description__body'>
               The reason I choose to dedicate myself to this is because I enjoy
@@ -143,7 +143,7 @@ export const Future = () => {
           />
         </div>
         <div className='description__wrapper'>
-          <div className='description'>
+          <div className='description description--future'>
             <div className='description__header'>My future goals...</div>
             <p className='description__body'>
               My future goal is to become the full product, I want to become a

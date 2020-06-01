@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .contentself {
   width: 100%;
@@ -70,12 +70,12 @@
     background-color: $dark-red;
     height: 42rem;
     width: 70rem;
+    margin-top: 13rem;
   }
   @include respond(phonex) {
     background-color: $dark-red;
     height: 42rem;
     width: 70rem;
-
     margin-top: 25rem;
   }
 

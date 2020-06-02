@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .project {
   height: 100%;
@@ -136,8 +136,9 @@
   .container--icons {
     height: 10%;
     width: 10rem;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
     position: absolute;
     left: 25rem;
@@ -149,8 +150,21 @@
     }
 
     @include respond(phone-land) {
-      left: 57rem;
+      left: 19rem;
+      top: 8rem;
       width: 5rem;
+      height: 2rem;
+    }
+    @include respond(phone) {
+      left: 75rem;
+      top: 15rem;
+      width: 5rem;
+    }
+    @include respond(phonex) {
+      flex-direction: column;
+      left: 64rem;
+      top: 23rem;
+      height: 6rem;
     }
   }
 
@@ -299,19 +313,28 @@
     width: 70%;
     display: block;
 
+    padding-right: 3rem;
+
+    @include respond(xs-desktop) {
+      padding-right: 0;
+    }
     @include respond(tab-port) {
       height: 70%;
       width: 70%;
     }
     @include respond(phone) {
-      visibility: hidden;
-    }
-    @include respond(phonex) {
-      visibility: hidden;
-    }
-    @include respond(phone-land) {
       height: 90%;
       width: 90%;
+      // visibility: hidden;
+    }
+    @include respond(phonex) {
+      height: 73%;
+      width: 73%;
+      // visibility: hidden;
+    }
+    @include respond(phone-land) {
+      height: 110%;
+      width: 110%;
     }
   }
 }

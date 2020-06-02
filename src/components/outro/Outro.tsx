@@ -68,6 +68,7 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
             placeholder='Name'
             type='text'
             required
+            disabled
           />
           <input
             value={form.subject}
@@ -76,21 +77,24 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
             placeholder='Subject'
             type='text'
             required
+            disabled
           />
           <input
             value={form.email}
             onChange={(e) => change('email', e.target.value)}
             className={`form__email form__input form__input--${theme}`}
-            placeholder='Email'
+            placeholder='diego.vops@gmail.com'
             type='email'
             required
+            disabled
           />
           <textarea
             value={form.message}
             onChange={(e) => change('message', e.target.value)}
             className={`form__message form__input form__input--${theme}`}
-            placeholder='Message'
+            placeholder='Still in development, please contact me on the email address above!!'
             required
+            disabled
           />
 
           <div className={`form__outro form__outro--${theme}`}>
@@ -149,7 +153,7 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
         >
           <div onClick={() => setMain(false)} className='links__icon--my'>
             {more ? (
-              'More about me'
+              'About Me'
             ) : (
               <svg
                 className={`moreIcon moreIcon--${theme}`}

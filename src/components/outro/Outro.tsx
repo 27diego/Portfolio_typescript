@@ -10,7 +10,7 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
   const [form, setForm] = useState({
     name: '',
     subject: '',
-    email: '',
+    email: 'diego.vops@gmail.com',
     message: '',
   });
 

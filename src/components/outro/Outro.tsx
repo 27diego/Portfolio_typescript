@@ -92,7 +92,7 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
             value={form.message}
             onChange={(e) => change('message', e.target.value)}
             className={`form__message form__input form__input--${theme}`}
-            placeholder='Still in development, please contact me on the email address above!!'
+            placeholder='Still in development. Please contact me on the email address above!!'
             required
             disabled
           />

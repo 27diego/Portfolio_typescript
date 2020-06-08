@@ -98,7 +98,7 @@ export const Outro: React.FC<OutroProps> = ({ setMain }) => {
           />
 
           <div className={`form__outro form__outro--${theme}`}>
-            I would love to help you on your next project!
+            I would love to help you on your next project!!
           </div>
 
           <button onClick={(e) => emailSubmit(e)} className='btn--Oform'>

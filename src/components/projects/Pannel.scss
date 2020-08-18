@@ -156,9 +156,11 @@
       height: 2rem;
     }
     @include respond(phone) {
-      left: 75rem;
-      top: 15rem;
+      flex-direction: column;
+      left: 87rem;
+      top: 23rem;
       width: 5rem;
+      height: 6rem;
     }
     @include respond(phonex) {
       flex-direction: column;
@@ -196,42 +198,32 @@
   }
 
   &__description {
-    font-size: 1.7rem;
-    color: $dark-white;
-    width: 20rem;
+    height: 23rem;
+    width: 15rem;
+    padding: 2rem;
+    background-color: $dark-black;
     position: absolute;
-    right: -10rem;
-    top: 25rem;
-    &--CIG {
-      width: 10rem;
-      right: -12rem;
+    top: 65%;
+    transform: translateY(-45%);
+    right: -15rem;
+    border-radius: 5px;
+    box-shadow: 0px 1px 57px -4px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    @include respond(phonex) {
+      right: -10rem;
     }
 
-    @include respond(xs-desktop) {
+    &--show{
+      visibility: visible;
+    }
+    &--hide{
       visibility: hidden;
     }
 
-    @include respond(tab-land) {
-      top: 35rem;
-      right: -12rem;
-
-      &--CIG {
-        right: -14rem;
-      }
-    }
-    @include respond(tab-port) {
-      font-size: 2.2rem;
-      top: 25rem;
-      right: -5rem;
-
-      &--CIG {
-        width: 15rem;
-        right: -10rem;
-        top: 18rem;
-      }
-    }
-    @include respond(phone) {
-      visibility: hidden;
+    &__text{
+      font-size: 1.5rem;
+      color: #fff;
     }
   }
 

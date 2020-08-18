@@ -113,9 +113,7 @@ export const Hobby = () => {
                   tackle developing problems. As for lifting I enjoy being
                   active and trying to stay healthy so it is something that I
                   like to challenge myself with. Lifting gave me a stronger
-                  sense of if I can put my mind to it, I can achieve it and it
-                  worked! In my first 10-12 months of lifting I gained 20lbs of
-                  muscle!
+                  sense of if I can put my mind to it, I can achieve it.
                 </p>
               </div>
             </div>
@@ -147,12 +145,11 @@ export const Future = () => {
             <div className='description__header'>My future goals...</div>
             <p className='description__body'>
               My future goal is to become the full product, I want to become a
-              DevOps engineer and to do that I have to master full stack
-              development. That means constant learning and working on new
+              DevOps engineer and that means constant learning and working on new
               projects to expand my skillset in order to adapt to new challenges
               as efficiently as possible. It's a long path get where I want to
               go but everyday offers a new opportunity to get closer to new
-              goals and heights.
+              goals.
             </p>
           </div>
         </div>

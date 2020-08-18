@@ -53,7 +53,7 @@ export const Intro = () => {
       <div className={`greeting greeting--${theme}`}>
         <h1 className="greeting__header">Hello I'm Diego,</h1>
         <div className="greeting__body">
-          I am a Developer and aspiring Web Designer out of
+          I am a Web and Mobile developer out of
           <div className="greeting__home">
             {" "}
             Salinas, CA

@@ -14,6 +14,7 @@ export const Pannel: React.FC<Projects> = ({
   const [expand, setExpand] = useState<boolean>(false);
   const container = useRef<HTMLDivElement>(null);
   const [desExpand, setDesExpand] = useState(true);
+  const [displayInfo, setDisplayInfo] = useState(false)
 
   useEffect(() => {
     window.addEventListener('resize', resize);
@@ -58,9 +59,11 @@ export const Pannel: React.FC<Projects> = ({
             />
           ))}
         </div>
-        <img className='project__landing' src={landing} alt='landing page' />
-        <div className={`project__description project__description--${title}`}>
+        <img onMouseOver={() => setDisplayInfo(true)} onMouseLeave={()=> setDisplayInfo(false)} className='project__landing' src={landing} alt='landing page' />
+        <div className={`project__description project__description--${displayInfo ? 'show' : 'hide'}`}>
+          <div className="project__description__text">
           {desExpand && description}
+          </div>
         </div>
         <a
           href={link}

@@ -59,7 +59,7 @@ export const Pannel: React.FC<Projects> = ({
             />
           ))}
         </div>
-        <img onMouseOver={() => setDisplayInfo(true)} onMouseLeave={()=> setDisplayInfo(false)} className='project__landing' src={landing} alt='landing page' />
+        <img onMouseOver={() => setDisplayInfo(true)} onMouseLeave={()=> setDisplayInfo(false)} className={`project__landing  project__landing--${displayInfo ? 'pop' : ""}`} src={landing} alt='landing page' />
         <div className={`project__description project__description--${displayInfo ? 'show' : 'hide'}`}>
           <div className="project__description__text">
           {desExpand && description}

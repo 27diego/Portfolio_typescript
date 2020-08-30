@@ -16,8 +16,9 @@ body,
 html {
   background-color: #222831;
   margin: 0;
-  padding: 0;
   font-size: 10px;
+  padding: 0 4rem;
+
 
   @include respond(big-desktop) {
     font-size: 14px;
@@ -25,35 +26,44 @@ html {
 
   @include respond(med-desktop) {
     font-size: 9px;
+    padding: 0;
   }
 
   @include respond(sm-desktop) {
     font-size: 8px;
+    padding: 0;
   }
 
   @include respond(xs-desktop) {
     font-size: 7px;
+    padding: 0;
   }
 
   @include respond(tab-land) {
     font-size: 8px;
+    padding: 0;
   }
 
   @include respond(tab-port) {
     font-size: 7px;
+    padding: 0;
   }
 
   @include respond(phone) {
     font-size: 5px;
+    padding: 0;
   }
   @include respond(phone-land) {
     font-size: 7px;
+    padding: 0;
   }
   @include respond(phonex) {
     font-size: 5px;
+    padding: 0;
   }
   @include respond(iphone5) {
     font-size: 3.5px;
+    padding: 0;
   }
 
   font-family: Helvetica;
